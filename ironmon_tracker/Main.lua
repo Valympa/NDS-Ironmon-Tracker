@@ -9,7 +9,10 @@ local function Main()
 	dofile("ironmon_tracker/utils/FormsUtils.lua")
     dofile("ironmon_tracker/utils/MiscUtils.lua")
 
+	local Localization = dofile("ironmon_tracker/translations/Localization.lua")
+
     local version = client.getversion()
+	
 	local versionSplit = {}
     for number in version:gmatch("%d+") do
         table.insert(versionSplit, tonumber(number))
@@ -18,6 +21,7 @@ local function Main()
 		newerBizhawk = false
 		Chars.accentedE = "\233"
 	end
+
 	dofile("ironmon_tracker/constants/PlaythroughConstants.lua")
 	dofile("ironmon_tracker/constants/MiscConstants.lua")
 
@@ -163,6 +167,8 @@ local function Main()
 		local Program = dofile(Paths.FOLDERS.DATA_FOLDER .. "/Program.lua")
 		tracker = Tracker()
 		readSettings()
+		Localization.loadLanguage(settings.appearance.LANGUAGE)
+		print("Language loaded: " .. settings.appearance.LANGUAGE)
 		PlaythroughConstants.initializeStandardMessages()
 		ThemeFactory.setSettings(settings)
 		if newerBizhawk then
