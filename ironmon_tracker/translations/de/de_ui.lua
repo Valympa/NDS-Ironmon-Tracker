@@ -6,19 +6,19 @@ return {
 	
 -- TitleScreen/GameNames (NDS ONLY)
 
-	["Pokemon Diamond"] = "Pokémon Diamant",
-	["Pokemon Pearl"] = "Pokémon Perl",
-	["Pokemon Platinum"] = "Pokémon Platin",
+	["Pokemon Diamond"] = "Pokémon Diamond",
+	["Pokemon Pearl"] = "Pokémon Pearl",
+	["Pokemon Platinum"] = "Pokémon Platinum",
 	["Pokemon HeartGold"] = "Pokémon HeartGold",
 	["Pokemon SoulSilver"] = "Pokémon SoulSilver",
-	["Pokemon Black"] = "Pokémon Schwarz",
-	["Pokemon White"] = "Pokémon Weiß",
-	["Pokemon Black 2"] = "Pokémon Schwarz 2",
-	["Pokemon White 2"] = "Pokémon Weiß 2",
+	["Pokemon Black"] = "Pokémon Black",
+	["Pokemon White"] = "Pokémon White",
+	["Pokemon Black 2"] = "Pokémon Black 2",
+	["Pokemon White 2"] = "Pokémon White 2",
 	
-	ATTEMPTS_TEXT = "Versuche: %d",
-	FUN_STATISTICS = "Sobald du genug gespielt hast, werden hier interessante Statistiken angezeigt.",
-	DID_YOU_KNOW = "Wusstest du? ",
+	ATTEMPTS_TEXT = "Attempts: %d",
+	FUN_STATISTICS = "Fun statistics will be shown here once you play enough.",
+	DID_YOU_KNOW = "Did you know? ",
 	
 	PERCENT_STAT_1 = "You get out of the lab %percent% of the time.",
 	PERCENT_STAT_2 = "You run sub 300 BST Pok" .. Chars.accentedE .. "mon %percent% of the time.",
@@ -40,49 +40,49 @@ return {
 	BASIC_STAT_8 = "Your enemies have %data% the most.",
 	
 	FAVORITE_NUMBER_NAME = "Favorite %d: %s",
-	TITLE_SCREEN_FAVORITES = "Favoriten",
-	TITLE_SCREEN_EDIT_FAVORITES = "Favoriten ändern",
-	TITLE_SCREEN_FAVORITES_SET = " ...",
-	TITLE_SCREEN_FAVORITES_CLOSE = "Zurück",
+	TITLE_SCREEN_FAVORITES = "Favorites",
+	TITLE_SCREEN_EDIT_FAVORITES = "Edit Favorites",
+	TITLE_SCREEN_FAVORITES_SET = "Set",
+	TITLE_SCREEN_FAVORITES_CLOSE = "Close",
 	TITLE_SCREEN_FAVORITES_ID = "Favorite ",
 
 -- MainScreen
 
-	POKEMON_DOES_NOT_LEARN_MOVES = "Dieses Pok" .. Chars.accentedE .. "mon lernt keine Attacken.",
-	DO_NOT_HAVE_ITEMS = "Du hast aktuell keine %s Items.",
-	MAIN_SCREEN_HP_PLACEHOLDER = "KP: ?/?",
-	MAIN_SCREEN_HP_LIVE = "KP: ",
-	MAIN_SCREEN_TOTAL_SEEN = "Gesehen: ",
-	MAIN_SCREEN_LAST_LEVEL = "Letztes Lvl.: ",
+	POKEMON_DOES_NOT_LEARN_MOVES = "This Pok" .. Chars.accentedE .. "mon does not learn any moves.",
+	DO_NOT_HAVE_ITEMS = "You currently do not have any %s items.",
+	MAIN_SCREEN_HP_PLACEHOLDER = "HP: ?/?",
+	MAIN_SCREEN_HP_LIVE = "HP: ",
+	MAIN_SCREEN_TOTAL_SEEN = "Total seen: ",
+	MAIN_SCREEN_LAST_LEVEL = "Last level: ",
 	MAIN_SCREEN_ITEM = "Item: ",
-	MAIN_SCREEN_ITEM_NONE = "Item: /",
-	MAIN_SCREEN_HEALS = "Heilung: ",
-	MAIN_SCREEN_STATUS_ITEMS = "Status Items: ",
-	MAIN_SCREEN_EVO_READY = "BEREIT",
+	MAIN_SCREEN_ITEM_NONE = "Item: None",
+	MAIN_SCREEN_HEALS = "Heals: ",
+	MAIN_SCREEN_STATUS_ITEMS = "Status items: ",
+	MAIN_SCREEN_EVO_READY = "READY",
 	MAIN_SCREEN_LEVEL = "Lv. ",
 	MAIN_SCREEN_UNKNOWN = "?",
-	MAIN_SCREEN_POKEMON_DISLIKE = "Dein Pok" .. Chars.accentedE .. "mon wird das nicht mögen.",
-	MAIN_SCREEN_YUM = "Nom!",
-	MAIN_SCREEN_NO_DATA_FOUND = "Keine Daten gefunden.",
-	MAIN_SCREEN_YOU_WON = "Du hast gewonnen!",
+	MAIN_SCREEN_POKEMON_DISLIKE = " Your Pok" .. Chars.accentedE .. "mon will dislike this.",
+	MAIN_SCREEN_YUM = "Yum!",
+	MAIN_SCREEN_NO_DATA_FOUND = "No data was found.",
+	MAIN_SCREEN_YOU_WON = "You won!",
 	
 	
 -- MainScreen/RandomBallScreen
 
-	RANDOM_BALL_LEFT = "Links",
-	RANDOM_BALL_MIDDLE = "Mitte",
-	RANDOM_BALL_RIGHT = "Rechts",
-	RANDOM_BALL_LABEL = "Zufalls-Ball: ",
+	RANDOM_BALL_LEFT = "Left",
+	RANDOM_BALL_MIDDLE = "Middle",
+	RANDOM_BALL_RIGHT = "Right",
+	RANDOM_BALL_LABEL = "Random ball: ",
 	
 -- MainScreen/EvoDataScreen
 
-	EVO_SORT_BY = "Sortiert:",
+	EVO_SORT_BY = "Sort by:",
 	EVO_NAME = "Name",
 	EVO_BST = "BST",
-	EVO_PERCENT = "Prozent",
-	EVO_DATA_FROM = "Daten von brdy und Harkenn",
-	EVO_VIEW_SITE = "Öffne Seite",
-	EVO_CLOSE = "Zurück",
+	EVO_PERCENT = "Percent",
+	EVO_DATA_FROM = "Data from brdy and Harkenn",
+	EVO_VIEW_SITE = "View Site",
+	EVO_CLOSE = "Close",
 	
 -- MainScreen/RunOverScreen
 
@@ -104,25 +104,25 @@ return {
 	BUTTON_EXTRAS = "Extras",
 
 	TRACKER_VERSION_LABEL = "Tracker version: ",
-	GO_BACK_15 = "Go back",
+	MAIN_OPTIONS_GO_BACK = "Go back",
 
 -- BattleSettingsScreen
 
 	BATTLE_SETTINGS = "Battle Settings",
 	AUTO_SWAP_TO_ENEMY = "Auto swap to enemy",
-	SHOW_MOVE_EFFECTIVENESS = "Show move effectivness",
+	SHOW_MOVE_EFFECTIVENESS = "Show move effectiveness",
 	CALCULATE_VARIABLE_DAMAGE = "Calculate variable damage",
 	SHOW_ACTUAL_ENEMY_PP = "Show actual enemy pp",
 	SHOW_1ST_FIGHT_STATS_PLATINUM = "Platinum: Show 1st fight stats",
 	ENABLE_ENEMY_LOCKING = "Enable enemy locking",
 	DOUBLES_MODE = "Doubles Mode",
-	GO_BACK_3 = "Go back",
+	BATTLE_SETTINGS_GO_BACK = "Go back",
 	
 -- TrackerAppearanceOptionsScreen
 
     TRACKER_APPEARANCE = "Tracker Appearance",
-	POKEMON_ICON_SETS_0 = "Pok" .. Chars.accentedE .. "mon Icon-Sets",
-	BADGES_APPEARANCE_0 = "Badges Appearance",
+	TRACKER_APPEARANCE_POKEMON_ICON_SETS = "Pok" .. Chars.accentedE .. "mon Icon-Sets",
+	TRACKER_APPEARANCE_BADGES_APPEARANCE = "Badges Appearance",
 	EDIT_COLOR_THEME = "Edit Color Theme",
 	AUTO_POKEMON_THEMES = "Auto Pokémon Themes",
     EXPERIENCE_BAR = "Show Experience Bar",
@@ -139,22 +139,22 @@ return {
 	
 -- TrackerAppearanceOptionsScreen/PokemonIconSetsScreen
 
-	POKEMON_ICON_SETS_1 = "Pok" .. Chars.accentedE .. "mon Icon-Sets",
+	ICON_SETS_SCREEN_POKEMON_ICON_SETS = "Pok" .. Chars.accentedE .. "mon Icon-Sets",
 	ENABLE_BROWS = "Enable Brows",
     FASTER_ANIMATIONS = "Faster Animations",
     CHANGE_DIRECTION = "Change Direction",
-    GO_BACK_0 = "Go Back",
+    ICON_SETS_SCREEN_GO_BACK = "Go back",
 
 -- TrackerAppearanceOptionsScreen/BadgesAppearanceScreen
 
-	BADGES_APPEARANCE_1 = "Badges Appearance",
+	BADGES_APPEARANCE_TITLE = "Badges Appearance",
     ALIGNMENT = "Alignment",
 	ABOVE = "Above",
 	BELOW = "Below",
 	RIGHT = "Right",
 	LEFT = "Left",
 	SPACER = "Spacer",
-	GO_BACK_1 = "Go Back",
+	BADGES_APPEARANCE_SCREEN_GO_BACK = "Go Back",
 
 -- TrackerAppearanceOptionsScreen/EditColorThemeScreen
 
@@ -163,7 +163,7 @@ return {
 	IMPORT_THEME = "Import theme",
 	EXPORT_THEME = "Export theme",
 	RESTORE_DEFAULTS = "Restore defaults",
-	GO_BACK_2 = "Go back",
+	EDIT_COLOR_THEME_GO_BACK = "Go back",
 	
 -- TrackedInfoScreen
 
@@ -178,12 +178,12 @@ return {
 	FAINT_ON_LEAD = "Lead Pok" .. Chars.accentedE .. "mon faints",
 	FAINT_ON_HIGHEST_LEVEL = "Highest level faints",
 	FAINT_ON_PARTY = "Entire party faints",
-	GO_BACK_4 = "Go back",
+	TRACKED_INFO_GO_BACK = "Go back",
 
 -- TrackedInfoScreen/TrackedPokemon
 
 	SEARCH = "Search",
-	GO_BACK_5 = "Go back",
+	TRACKED_POKEMON_GO_BACK = "Go back",
 
 -- TrackedInfoScreen/PastRuns
 
@@ -194,15 +194,14 @@ return {
 	A_Z = "A - Z",
 	MINIMUM_BADGES = "Minimum Badges",
 	DELETE_0_BADGES_RUNS = "Delete 0 Badge Runs",
-	GO_BACK_6 = "Go back",
+	PAST_RUNS_GO_BACK = "Go back",
 
 -- TrackedInfoScreen/Statistics
 
 	OVERALL_PROGRESS = "Overall Progress",
 	TOTAL_RUNS = "Total runs: ",
 	PLAYTIME = "Playtime: ",
-	GO_BACK_7 = "Go back",
-	
+	STATISTICS_GO_BACK = "Go back",
 	
 -- TrackedInfoScreen/(Open a Log)LogViewerScreen
 
@@ -261,7 +260,6 @@ return {
 	LOG_VIEWER_SEARCH_WITH = "With:",
 	LOG_VIEWER_SEARCH_NONE_FOUND = "None found",
 	LOG_VIEWER_SEARCH_TOTAL = "Total: ",
-
 	
 -- TrackedInfoScreen/RestorePoints
 
@@ -276,7 +274,7 @@ return {
     RESTOREPOINT_JUST_NOW = "Just now",
 	RESTOREPOINT_MINUTES_AGO_SINGULAR = "{minutes} minute ago",
 	RESTOREPOINT_MINUTES_AGO_PLURAL = "{minutes} minutes ago",
-	GO_BACK_8 = "Go back",
+	RESTORE_POINTS_GO_BACK = "Go back",
 
 -- TrackerSetupScreen
 
@@ -286,7 +284,7 @@ return {
 	START_NEW_RUN = "Start New Run:",
 	ADD_BUTTON = "Add button",
 	CLEAR_0 = "Clear",
-	GO_BACK_9 = "Go back",
+	TRACKER_SETUP_SCREEN_GO_BACK = "Go back",
 
 -- NewRunSettingsScreen
 
@@ -303,7 +301,7 @@ return {
 	SETTINGS_FILE = "Settings file",
 	SAVE_PROFILE = "Save Profile",
 	LOAD_PROFILE = "Load Profile",
-	GO_BACK_10 = "Go back",
+	NEW_RUN_SETTINGS_GO_BACK = "Go back",
 	MISSING_FILES_WARNING = "Missing files have been detected. Fill these in before saving a profile.",
 
 -- CheckForUpdatesScreen
@@ -321,7 +319,7 @@ return {
 	VIEW_RELEASE_NOTES = "View Release Notes",
 	IGNORE = "Ignore",
 	INSTALL = "Install",
-	GO_BACK_11 = "Go back",
+	CHECK_FOR_UPDATES_GO_BACK = "Go back",
 	
 -- UpdateNotesScreen
 
@@ -340,19 +338,19 @@ return {
 	TOURNEY_TRACKER = "Tourney Tracker",
 	DESCRIPTION_TOURNEY_1 = "Auto tracks your scores",
     DESCRIPTION_TOURNEY_2 = "for Crozwords' tourneys.",
-	ENABLED = "Enabled",
+	TOURNEY_TRACKER_ENABLED = "Enabled",
 	CLEAR_TOURNEY_SCORES = "Clear Tourney Scores",
     
-    STREAM_CONNECT = "Stream Connect",
+    EXTRA_STREAM_CONNECT = "Stream Connect",
 	DESCRIPTION_STREAM_1 = "Connects to streaming",
     DESCRIPTION_STREAM_2 = "services for chat interaction.",
 	OPEN_CONFIG = "Open Config",
-	GO_BACK_12 = "Go back",
+	EXTRA_GO_BACK = "Go back",
 	
 -- ExtraScreen/CoverageCalc
 
 	FULLY_EVOLVED_ONLY = "Fully evolved only",
-    GO_BACK_13 = "Go back",
+    COVERAGE_CALC_GO_BACK = "Go back",
 	
 -- ExtraScreen/TourneyTrackerScreen
 
@@ -384,6 +382,6 @@ return {
 	SELECT_JSON_FILE = "SELECT ANY JSON FILE",
 	FILTER_JSON = "Json File (*.JSON)|*.json|All files (*.*)|*.*",
 	HELP = "Help",
-	GO_BACK_14 = "Go back"
+	TOURNEY_TRACKER_GO_BACK = "Go back"
 
 }	
