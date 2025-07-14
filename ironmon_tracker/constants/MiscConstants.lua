@@ -10,6 +10,7 @@ MiscConstants.UPDATE_NOTES = {
 
 MiscConstants.DEFAULT_SETTINGS = {
     appearance = {
+        LANGUAGE = "en",
         AUTO_POKEMON_THEMES = false,
         EXPERIENCE_BAR = true,
         RIGHT_JUSTIFIED_NUMBERS = true,
