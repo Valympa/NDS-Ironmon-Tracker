@@ -16,6 +16,7 @@ local function PokemonStatScreen(initialSettings, initialTracker, initialProgram
     local BrowsManager = dofile(Paths.FOLDERS.EXTRAS_FOLDER .. "/BrowsManager.lua")
 
     local logViewerScreen = initialLogViewerScreen
+    local L = Localization.get
     local settings = initialSettings
     local movesScrollBar
     local sortedPokemonIDs = {}

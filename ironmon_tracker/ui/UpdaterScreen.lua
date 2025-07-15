@@ -8,6 +8,7 @@ local function UpdaterScreen(initialSettings, initialTracker, initialProgram)
     local Layout = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/Layout.lua")
     local MouseClickEventListener = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/MouseClickEventListener.lua")
     local FrameCounter = dofile(Paths.FOLDERS.DATA_FOLDER.."/FrameCounter.lua")
+    local L = Localization.get
     local settings = initialSettings
     local tracker = initialTracker
     local program = initialProgram

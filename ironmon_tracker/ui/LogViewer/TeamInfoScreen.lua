@@ -12,6 +12,7 @@ local function TeamInfoScreen(initialSettings, initialTracker, initialProgram, i
     local MouseClickEventListener = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/MouseClickEventListener.lua")
     local logInfo
     local logViewerScreen = initialLogViewerScreen
+    local L = Localization.get
     local settings = initialSettings
     local tracker = initialTracker
     local program = initialProgram

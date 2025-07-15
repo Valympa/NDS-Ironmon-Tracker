@@ -12,6 +12,7 @@ local function RivalOverviewScreen(initialSettings, initialTracker, initialProgr
     local MouseClickEventListener = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/MouseClickEventListener.lua")
     local ScreenStack = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/ScreenStack.lua")
     local logViewerScreen = initialLogViewerScreen
+    local L = Localization.get
     local settings = initialSettings
     local program = initialProgram
     local trainers

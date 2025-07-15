@@ -15,6 +15,7 @@ local function PokemonOverviewScreen(initialSettings, initialTracker, initialPro
     local ScreenStack = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/ScreenStack.lua")
     local statsScreen
     local logViewerScreen = initialLogViewerScreen
+    local L = Localization.get
     local settings = initialSettings
     local sortedPokemonIDs = {}
     local currentMatchSetIndex = 1

@@ -9,6 +9,7 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
     local MouseClickEventListener = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/MouseClickEventListener.lua")
     local SettingToggleButton = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/SettingToggleButton.lua")
     local ColorPicker = dofile(Paths.FOLDERS.DATA_FOLDER .. "/ColorPicker.lua")
+    local L = Localization.get
     local settings = initialSettings
     local tracker = initialTracker
     local program = initialProgram

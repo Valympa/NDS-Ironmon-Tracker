@@ -11,6 +11,7 @@ local function PokemonIconsScreen(initialSettings, initialTracker, initialProgra
     local SettingToggleButton = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/SettingToggleButton.lua")
     local MouseClickEventListener = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/MouseClickEventListener.lua")
     local FrameCounter = dofile(Paths.FOLDERS.DATA_FOLDER .. "/FrameCounter.lua")
+    local L = Localization.get
     local settings = initialSettings
     local tracker = initialTracker
     local program = initialProgram

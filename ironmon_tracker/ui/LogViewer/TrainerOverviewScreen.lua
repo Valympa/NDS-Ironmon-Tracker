@@ -13,6 +13,7 @@ local function TrainerOverviewScreen(initialSettings, initialTracker, initialPro
     local ScreenStack = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/ScreenStack.lua")
     local logInfo
     local logViewerScreen = initialLogViewerScreen
+    local L = Localization.get
     local settings = initialSettings
     local tracker = initialTracker
     local program = initialProgram

@@ -13,6 +13,7 @@ local function GymTMScreen(initialSettings, initialTracker, initialProgram, init
     local MouseClickEventListener = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/MouseClickEventListener.lua")
     local HoverEventListener = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/HoverEventListener.lua")
     local logInfo
+    local L = Localization.get
     local settings = initialSettings
     local logViewerScreen = initialLogViewerScreen
     local tracker = initialTracker

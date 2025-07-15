@@ -15,6 +15,7 @@ local function SearchScreen(initialSettings, initialTracker, initialProgram, ini
     local HoverEventListener = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/HoverEventListener.lua")
     local logInfo
     local miscInfo
+    local L = Localization.get
     local settings = initialSettings
     local logViewerScreen = initialLogViewerScreen
     local tracker = initialTracker
