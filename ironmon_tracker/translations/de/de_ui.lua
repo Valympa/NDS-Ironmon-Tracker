@@ -120,22 +120,27 @@ return {
 	
 -- TrackerAppearanceOptionsScreen
 
-    TRACKER_APPEARANCE = "Tracker Appearance",
-	TRACKER_APPEARANCE_POKEMON_ICON_SETS = "Pok" .. Chars.accentedE .. "mon Icon-Sets",
-	TRACKER_APPEARANCE_BADGES_APPEARANCE = "Badges Appearance",
-	EDIT_COLOR_THEME = "Edit Color Theme",
-	AUTO_POKEMON_THEMES = "Auto Pokémon Themes",
-    EXPERIENCE_BAR = "Show Experience Bar",
-    RANDOM_BALL_PICKER = "Random Ball Picker",
-    REPEL_ICON = "Show Repel Icon",
-    RIGHT_JUSTIFIED_NUMBERS = "Right justified Numbers",
-    SHOW_POKECENTER_HEALS = "Show Pokécenter Heals",
-    SHOW_ACCURACY_AND_EVASION = "Show Accuracy and Evasion",
-    SHOW_NICKNAME = "Show Nickname",
-    BAG_HEALS_SHOW_HP_INSTEAD = "Bag Heals show HP instead",
-	TIMER = "Timer",
-	ENABLED = "Enabled",
-	TRANSPARENT = "Transparent",
+    TITLE_TRACKER_APPEARANCE = "Tracker Darstellung",
+	TITLE_TIMER = "Timer",
+	
+	BUTTON_TRACKER_APPEARANCE_POKEMON_ICON_SETS = "Pok" .. Chars.accentedE .. "mon Icon-Sets",
+	BUTTON_TRACKER_APPEARANCE_BADGES_APPEARANCE = "Design der Orden",
+	BUTTON_EDIT_COLOR_THEME = "Farbdesign ändern",
+	BUTTON_TRACKER_APPERANCE_GO_BACK = "Zurück",
+
+	TOGGLE_AUTO_POKEMON_THEMES = "Auto Pokémon Motiv",
+    TOGGLE_EXPERIENCE_BAR = "Erfahrungsleiste anzeigen",
+    TOGGLE_RANDOM_BALL_PICKER = "Zufallsball-Auswahl",
+   	TOGGLE_REPEL_ICON = "Schutz-Icon anzeigen",
+    TOGGLE_RIGHT_JUSTIFIED_NUMBERS = "Zahlen rechtsbündig",
+    TOGGLE_SHOW_POKECENTER_HEALS = "Pokecenter - Heilungen",
+    TOGGLE_SHOW_ACCURACY_AND_EVASION = "Gena. & Ausw. anzeigen",
+    TOGGLE_SHOW_NICKNAME = "Spitznamen anzeigen",
+    TOGGLE_BAG_HEALS_SHOW_HP_INSTEAD = "Heals im Beutel zeigen KP an",
+	TOGGLE_BLIND_MODE = "Blindmodus (versteckt Werte)",
+	
+	TOGGLE_ENABLED = "Aktivieren",
+	TOGGLE_TRANSPARENT = "Transparent",
 	
 -- TrackerAppearanceOptionsScreen/PokemonIconSetsScreen
 
