@@ -93,18 +93,19 @@ return {
 	
 -- MainOptionsScreen
 
-	MAIN_OPTIONS_CONFIG = "Config",
+	TITLE_MAIN_OPTIONS_CONFIG = "Einstellungen",
 
-	BUTTON_BATTLE_SETTINGS = "Battle Settings",
-	BUTTON_TRACKER_APPEARANCE = "Tracker Appearance",
-	BUTTON_TRACKED_INFO = "Tracked Info",
-	BUTTON_TRACKER_SETUP = "Tracker Setup",
-	BUTTON_NEW_RUN_SETTINGS = "New Run Settings",
-	BUTTON_CHECK_FOR_UPDATES = "Check for Updates",
-	BUTTON_EXTRAS = "Extras",
-
-	TRACKER_VERSION_LABEL = "Tracker version: ",
-	MAIN_OPTIONS_GO_BACK = "Go back",
+	BUTTON_MAIN_OPTIONS_BATTLE_SETTINGS = "Kampf - Einstellungen",
+	BUTTON_MAIN_OPTIONS_TRACKER_APPEARANCE = "Tracker Darstellung",
+	BUTTON_MAIN_OPTIONS_TRACKED_INFO = "Getrackte Infos",
+	BUTTON_MAIN_OPTIONS_TRACKER_SETUP = "Tracker Einstellung",
+	BUTTON_MAIN_OPTIONS_NEW_RUN_SETTINGS = "Run Startoptionen",
+	BUTTON_MAIN_OPTIONS_CHECK_FOR_UPDATES = "Nach Updates suchen",
+	BUTTON_MAIN_OPTIONS_EXTRAS = "Extras",
+	
+	BUTTON_MAIN_OPTIONS_GO_BACK = "Zurück",
+	
+	LABEL_MAIN_OPTIONS_TRACKER_VERSION = "Tracker Version: ",
 
 -- BattleSettingsScreen
 

@@ -61,7 +61,7 @@ local function MainOptionsScreen(initialSettings, initialTracker, initialProgram
 		TextLabel(
 			Component(ui.frames.bottomFrame, Box({x = 0, y = 0}, {width = 92, height = 18}, nil, nil)),
 			TextField(
-				"Tracker version: " .. MiscConstants.TRACKER_VERSION,
+				L("LABEL_MAIN_OPTIONS_TRACKER_VERSION") .. MiscConstants.TRACKER_VERSION,
 				{x = 4, y = 1},
 				TextStyle(
 					Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -85,7 +85,7 @@ local function MainOptionsScreen(initialSettings, initialTracker, initialProgram
 				)
 			),
 			TextField(
-				"Go back",
+				L("BUTTON_MAIN_OPTIONS_GO_BACK"),
 				{x = 3, y = 1},
 				TextStyle(
 					Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -98,13 +98,13 @@ local function MainOptionsScreen(initialSettings, initialTracker, initialProgram
 	end
 	local function initMainButtons()
 		local buttonNames = {
-			battleSettingsButton = "Battle Settings",
-			trackerAppearanceButton = "Tracker Appearance",
-			trackedInfoButton = "Tracked Info",
-			trackerSetupButton = "Tracker Setup",
-			quickLoadButton = "New Run Settings",
-			updaterButton = "Check for Updates",
-			extrasButton = "Extras"
+			battleSettingsButton = L("BUTTON_MAIN_OPTIONS_BATTLE_SETTINGS"),
+			trackerAppearanceButton = L("BUTTON_MAIN_OPTIONS_TRACKER_APPEARANCE"),
+			trackedInfoButton = L("BUTTON_MAIN_OPTIONS_TRACKED_INFO"),
+			trackerSetupButton = L("BUTTON_MAIN_OPTIONS_TRACKER_SETUP"),
+			quickLoadButton = L("BUTTON_MAIN_OPTIONS_NEW_RUN_SETTINGS"),
+			updaterButton = L("BUTTON_MAIN_OPTIONS_CHECK_FOR_UPDATES"),
+			extrasButton = L("BUTTON_MAIN_OPTIONS_EXTRAS")
 		}
 		local icons = {"SWORD", "SPARKLES", "TRACKED_INFO_ICON", "CONTROLLER", "LIGHTNING_BOLT", "UPDATER_ICON", "EXTRAS_ICON"}
 		local order = {
@@ -203,7 +203,7 @@ local function MainOptionsScreen(initialSettings, initialTracker, initialProgram
 				)
 			),
 			TextField(
-				"Config",
+				L("TITLE_MAIN_OPTIONS_CONFIG"),
 				{x = 48, y = 1},
 				TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
 			)
