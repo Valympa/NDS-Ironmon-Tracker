@@ -9,7 +9,7 @@ local function Main()
 	dofile("ironmon_tracker/utils/FormsUtils.lua")
     dofile("ironmon_tracker/utils/MiscUtils.lua")
 
-	local Localization = dofile("ironmon_tracker/translations/Localization.lua")
+	Localization = dofile("ironmon_tracker/translations/Localization.lua")
 
     local version = client.getversion()
 	
