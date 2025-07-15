@@ -87,12 +87,10 @@ local function AppearanceOptionsScreen(initialSettings, initialTracker, initialP
             program.saveSettings
         )
         local labelName
-        labelName = key:gsub("_", " "):lower()
-        labelName = labelName:sub(1, 1):upper() .. labelName:sub(2)
-        labelName = labelName:gsub("poke", "Pok" .. Chars.accentedE)
-        labelName = labelName:gsub("hp", "HP")
         if key == "BLIND_MODE" then
-            labelName = "Blind mode (hides stats/ability)"
+        labelName = L("TOGGLE_BLIND_MODE")
+        else
+        labelName = L("TOGGLE_" .. key) or key  
         end
         TextLabel(
             Component(frame, Box({x = 0, y = 0}, {width = 0, height = 0}, nil, nil, false)),
@@ -157,9 +155,9 @@ local function AppearanceOptionsScreen(initialSettings, initialTracker, initialP
             ui.frames.mainInnerFrame
         )
         local buttons = {
-            badgesAppearanceButton = {name = "Badges Appearance", iconName = program.getGameInfo().BADGE_PREFIX},
-            colorThemeButton = {name = "Edit Color Theme", iconName = "PAINTBRUSH"},
-            pokemonIconsButton = {name = "Pok" .. Chars.accentedE .. "mon Icon Sets", iconName = "POKEBALL"}
+            badgesAppearanceButton = {name = L("BUTTON_TRACKER_APPEARANCE_BADGES_APPEARANCE"), iconName = program.getGameInfo().BADGE_PREFIX},
+            colorThemeButton = {name = L("BUTTON_EDIT_COLOR_THEME"), iconName = "PAINTBRUSH"},
+            pokemonIconsButton = {name = L("BUTTON_TRACKER_APPEARANCE_POKEMON_ICON_SETS"), iconName = "POKEBALL"}
         }
         local order = {"pokemonIconsButton", "badgesAppearanceButton", "colorThemeButton"}
         for i, key in pairs(order) do
@@ -241,7 +239,7 @@ local function AppearanceOptionsScreen(initialSettings, initialTracker, initialP
             TextLabel(
             Component(iconHeadingFrame, Box({x = 0, y = 0}, {width = 0, height = 0})),
             TextField(
-                "Timer",
+                L("TITLE_TIMER"),
                 {x = 1, y = 0},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE + 2,
@@ -289,7 +287,7 @@ local function AppearanceOptionsScreen(initialSettings, initialTracker, initialP
                 )
             ),
             TextField(
-                "Go back",
+                L("BUTTON_TRACKER_APPERANCE_GO_BACK"),
                 {x = 3, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -346,7 +344,7 @@ local function AppearanceOptionsScreen(initialSettings, initialTracker, initialP
                 )
             ),
             TextField(
-                "Tracker Appearance",
+                L("TITLE_TRACKER_APPEARANCE"),
                 {x = 14, y = 1},
                 TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
