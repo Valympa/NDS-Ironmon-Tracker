@@ -279,7 +279,7 @@ local function BadgesAppearanceScreen(initialSettings, initialTracker, initialPr
                 )
             ),
             TextField(
-                "Go back",
+                L("BUTTON_BADGES_APPEARANCE_SCREEN_GO_BACK"),
                 {x = 3, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -339,7 +339,7 @@ local function BadgesAppearanceScreen(initialSettings, initialTracker, initialPr
                     program.saveSettings
                 )
                 table.insert(eventListeners, MouseClickEventListener(radioButton, onRadioButtonClick, radioButton))
-                local text = settingName:sub(1, 1):upper() .. settingName:sub(2):lower()
+                local text = L("OPTION_BADGE_POSITION_" .. settingName:upper()) or settingName
                 TextLabel(
                     Component(
                         singleBadgeFrames[i],
@@ -399,7 +399,7 @@ local function BadgesAppearanceScreen(initialSettings, initialTracker, initialPr
             TextLabel(
             Component(spacerFrame, Box({x = 0, y = 0}, {width = 0, height = 0}, nil, nil, false)),
             TextField(
-                "Spacer",
+                L("LABEL_SPACER"),
                 {x = 0, y = 0},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -440,7 +440,7 @@ local function BadgesAppearanceScreen(initialSettings, initialTracker, initialPr
                 )
             ),
             TextField(
-                "Alignment",
+                L("TITLE_ALIGNMENT"),
                 {x = 42, y = 3},
                 TextStyle(11, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
@@ -603,7 +603,7 @@ local function BadgesAppearanceScreen(initialSettings, initialTracker, initialPr
                 )
             ),
             TextField(
-                "Badges Appearance",
+                L("TITLE_BADGES_APPEARANCE"),
                 {x = 14, y = 1},
                 TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )

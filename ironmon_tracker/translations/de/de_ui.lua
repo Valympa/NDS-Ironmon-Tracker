@@ -152,14 +152,14 @@ return {
 
 -- TrackerAppearanceOptionsScreen/BadgesAppearanceScreen
 
-	BADGES_APPEARANCE_TITLE = "Badges Appearance",
-    ALIGNMENT = "Alignment",
-	ABOVE = "Above",
-	BELOW = "Below",
-	RIGHT = "Right",
-	LEFT = "Left",
-	SPACER = "Spacer",
-	BADGES_APPEARANCE_SCREEN_GO_BACK = "Go Back",
+	TITLE_BADGES_APPEARANCE= "Darstellung Orden",
+    TITLE_ALIGNMENT = "Anordnung",
+	OPTION_BADGE_POSITION_ABOVE = "Oben",
+	OPTION_BADGE_POSITION_BELOW = "Unten",
+	OPTION_BADGE_POSITION_RIGHT = "Rechts",
+	OPTION_BADGE_POSITION_LEFT = "Links",
+	LABEL_SPACER = "Abstandshalter",
+	BUTTON_BADGES_APPEARANCE_SCREEN_GO_BACK = "Zurück",
 
 -- TrackerAppearanceOptionsScreen/EditColorThemeScreen
 
