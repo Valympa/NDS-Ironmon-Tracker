@@ -146,11 +146,11 @@ return {
 	
 -- TrackerAppearanceOptionsScreen/PokemonIconSetsScreen
 
-	ICON_SETS_SCREEN_POKEMON_ICON_SETS = "Pok" .. Chars.accentedE .. "mon Icon-Sets",
-	ENABLE_BROWS = "Enable Brows",
-    FASTER_ANIMATIONS = "Faster Animations",
-    CHANGE_DIRECTION = "Change Direction",
-    ICON_SETS_SCREEN_GO_BACK = "Go back",
+	TITLE_ICON_SETS_SCREEN_POKEMON_ICON_SETS = "Pok" .. Chars.accentedE .. "mon Icon-Sets",
+	TOGGLE_ENABLE_BROWS = "Enable Brows",
+    TOGGLE_FASTER_ANIMATIONS = "Faster Animations",
+    TOGGLE_CHANGE_DIRECTION = "Change Direction",
+    BUTTON_ICON_SETS_SCREEN_GO_BACK = "Go back",
 
 -- TrackerAppearanceOptionsScreen/BadgesAppearanceScreen
 

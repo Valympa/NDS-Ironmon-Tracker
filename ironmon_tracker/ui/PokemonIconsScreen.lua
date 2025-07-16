@@ -215,7 +215,7 @@ local function PokemonIconsScreen(initialSettings, initialTracker, initialProgra
             true,
             program.saveSettings
         )
-        local labelName = "Enable Brows"
+        local labelName = L("TOGGLE_ENABLE_BROWS")
         ui.controls.browsToggleLabel =
             TextLabel(
             Component(ui.frames.browsToggleFrame, Box({x = 0, y = 0}, {width = 0, height = 0}, nil, nil, false)),
@@ -237,7 +237,7 @@ local function PokemonIconsScreen(initialSettings, initialTracker, initialProgra
     end
 
     local function createAnimatedToggleRow(option)
-        local frame =
+		local frame =
             Frame(
             Box(
                 {x = 0, y = 0},
@@ -269,11 +269,15 @@ local function PokemonIconsScreen(initialSettings, initialTracker, initialProgra
             true,
             program.saveSettings
         )
+
+        local labelKey = "TOGGLE_" .. option
+        local labelText = L(labelKey) or (option:sub(1, 1) .. option:sub(2):lower():gsub("_", " "))
+
         local toggleLabel =
             TextLabel(
             Component(frame, Box({x = 0, y = 0}, {width = 0, height = 0})),
             TextField(
-                option:sub(1, 1) .. option:sub(2):lower():gsub("_", " "),
+                labelText,
                 {x = 2, y = 0},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -407,7 +411,7 @@ local function PokemonIconsScreen(initialSettings, initialTracker, initialProgra
                 )
             ),
             TextField(
-                "Pok" .. Chars.accentedE .. "mon Icon Sets",
+                L("TITLE_ICON_SETS_SCREEN_POKEMON_ICON_SETS"),
                 {x = 16, y = 1},
                 TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
@@ -473,7 +477,7 @@ local function PokemonIconsScreen(initialSettings, initialTracker, initialProgra
                 )
             ),
             TextField(
-                "Go back",
+                L("BUTTON_ICON_SETS_SCREEN_GO_BACK"),
                 {x = 3, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
