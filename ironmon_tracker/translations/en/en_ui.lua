@@ -110,15 +110,15 @@ return {
 
 -- BattleSettingsScreen
 
-	BATTLE_SETTINGS = "Battle Settings",
-	AUTO_SWAP_TO_ENEMY = "Auto swap to enemy",
-	SHOW_MOVE_EFFECTIVENESS = "Show move effectiveness",
-	CALCULATE_VARIABLE_DAMAGE = "Calculate variable damage",
-	SHOW_ACTUAL_ENEMY_PP = "Show actual enemy pp",
-	SHOW_1ST_FIGHT_STATS_PLATINUM = "Platinum: Show 1st fight stats",
-	ENABLE_ENEMY_LOCKING = "Enable enemy locking",
-	DOUBLES_MODE = "Doubles Mode",
-	BATTLE_SETTINGS_GO_BACK = "Go back",
+	TITLE_BATTLE_SETTINGS = "Battle Settings",
+	TOGGLE_AUTO_SWAP_TO_ENEMY = "Auto swap to enemy",
+	TOGGLE_SHOW_MOVE_EFFECTIVENESS = "Show move effectiveness",
+	TOGGLE_CALCULATE_VARIABLE_DAMAGE = "Calculate variable damage",
+	TOGGLE_SHOW_ACTUAL_ENEMY_PP = "Show actual enemy pp",
+	TOGGLE_SHOW_1ST_FIGHT_STATS_PLATINUM = "Platinum: Show 1st fight stats",
+	TOGGLE_ENABLE_ENEMY_LOCKING = "Enable enemy locking",
+	TOGGLE_DOUBLES_MODE = "Doubles Mode",
+	BUTTON_BATTLE_SETTINGS_GO_BACK = "Go back",
 	
 -- TrackerAppearanceOptionsScreen
 

@@ -69,13 +69,9 @@ local function BattleOptionsScreen(initialSettings, initialTracker, initialProgr
                 true,
                 program.saveSettings
             )
-            local labelName
-            if key == "SHOW_1ST_FIGHT_STATS_PLATINUM" then
-                labelName = "Platinum: Show 1st fight stats"
-            else
-                labelName = key:gsub("_", " "):lower()
-                labelName = labelName:sub(1, 1):upper() .. labelName:sub(2)
-            end
+            
+            local labelName = L("TOGGLE_" .. key) or key
+            
             TextLabel(
                 Component(frame, Box({x = 0, y = 0}, {width = 0, height = 0}, nil, nil, false)),
                 TextField(
@@ -133,7 +129,7 @@ local function BattleOptionsScreen(initialSettings, initialTracker, initialProgr
                 )
             ),
             TextField(
-                "Battle Settings",
+                L("TITLE_BATTLE_SETTINGS"),
                 {x = 28, y = 1},
                 TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
@@ -152,7 +148,7 @@ local function BattleOptionsScreen(initialSettings, initialTracker, initialProgr
                 )
             ),
             TextField(
-                "Go back",
+                L("BUTTON_BATTLE_SETTINGS_GO_BACK"),
                 {x = 3, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
