@@ -204,10 +204,10 @@ return {
 
 -- TrackedInfoScreen/Statistics
 
-	OVERALL_PROGRESS = "Overall Progress",
-	TOTAL_RUNS = "Total runs: ",
-	PLAYTIME = "Playtime: ",
-	STATISTICS_GO_BACK = "Go back",
+	TITLE_OVERALL_PROGRESS = "Overall Progress",
+	TITLE_TOTAL_RUNS = "Total runs: ",
+	TITLE_PLAYTIME = "Playtime: ",
+	BUTTON_STATISTICS_GO_BACK = "Go back",
 	
 -- TrackedInfoScreen/(Open a Log)LogViewerScreen
 
