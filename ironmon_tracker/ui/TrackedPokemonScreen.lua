@@ -127,7 +127,7 @@ local function TrackedPokemonScreen(initialSettings, initialTracker, initialProg
                 )
             ),
             TextField(
-                "Search",
+                L("TITLE_SEARCH"),
                 {x = 50, y = 1},
                 TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
@@ -253,7 +253,7 @@ local function TrackedPokemonScreen(initialSettings, initialTracker, initialProg
                 )
             ),
             TextField(
-                "Go back",
+                L("BUTTON_TRACKED_POKEMON_GO_BACK"),
                 {x = 3, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,

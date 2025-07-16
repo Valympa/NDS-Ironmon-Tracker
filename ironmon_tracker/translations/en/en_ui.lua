@@ -189,8 +189,8 @@ return {
 
 -- TrackedInfoScreen/TrackedPokemon
 
-	SEARCH = "Search",
-	TRACKED_POKEMON_GO_BACK = "Go back",
+	TITLE_SEARCH = "Search",
+	BUTTON_TRACKED_POKEMON_GO_BACK = "Go back",
 
 -- TrackedInfoScreen/PastRuns
 
