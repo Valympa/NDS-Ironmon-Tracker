@@ -193,14 +193,14 @@ return {
 
 -- TrackedInfoScreen/PastRuns
 
-	SWAP = "Swap",
-	SORT_BY = "Sort By",
-	NEWEST = "Newest",
-	OLDEST = "Oldest",
-	A_Z = "A - Z",
-	MINIMUM_BADGES = "Minimum Badges",
-	DELETE_0_BADGES_RUNS = "Delete 0 Badge Runs",
-	PAST_RUNS_GO_BACK = "Go back",
+	BUTTON_SWAP = "Swap",
+	TITLE_SORT_BY = "Sort By",
+	BUTTON_NEWEST = "Newest",
+	BUTTON_OLDEST = "Oldest",
+	BUTTON_A_Z = "A - Z",
+	TITLE_MINIMUM_BADGES = "Minimum Badges",
+	BUTTON_DELETE_0_BADGES_RUNS = "Delete 0 Badge Runs",
+	BUTTON_PAST_RUNS_GO_BACK = "Go back",
 
 -- TrackedInfoScreen/Statistics
 
