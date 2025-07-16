@@ -95,7 +95,7 @@ local function TrackedInfoScreen(initialSettings, initialTracker, initialProgram
 				)
 			),
 			TextField(
-				"Go back",
+				L("BUTTON_TRACKED_INFO_GO_BACK"),
 				{x = 3, y = 1},
 				TextStyle(
 					Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -108,12 +108,12 @@ local function TrackedInfoScreen(initialSettings, initialTracker, initialProgram
 	end
 	local function initMainButtons()
 		local buttonNames = {
-			trackedPokemonButton = "Tracked Pok" .. Chars.accentedE .. "mon",
-			pastRunsButton = "Past Runs",
-			statisticsButton = "Statistics",
-			openLogButton = "Open a Log",
-			openRestorePointsButton = "Restore Points",
-			loadTrackerDataButton = "Load Tracker Data"
+			trackedPokemonButton = L("BUTTON_TRACKED_POKEMON"),
+			pastRunsButton = L("BUTTON_PAST_RUNS"),
+			statisticsButton = L("BUTTON_STATISTICS"),
+			openLogButton = L("BUTTON_OPEN_LOG"),
+			openRestorePointsButton = L("BUTTON_RESTORE_POINTS"),
+			loadTrackerDataButton = L("BUTTON_LOAD_TRACKER_DATA")
 		}
 		local icons = {"PENCIL", "PAST_RUN_ICON", "STATISTICS_ICON", "OPEN_LOG_ICON", "RESTORE_POINTS_ICON", "LOAD_TRACKER_DATA"}
 		local order = {
@@ -226,7 +226,7 @@ local function TrackedInfoScreen(initialSettings, initialTracker, initialProgram
 			TextLabel(
 			Component(ui.frames.faintDetectionFrame, Box({x = 0, y = 0}, {width = 0, height = 13})),
 			TextField(
-				"Run is considered over when:",
+				L("TITLE_RUN_OVER_LABEL"),
 				{x = -1, y = 0},
 				TextStyle(
 					Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -237,9 +237,9 @@ local function TrackedInfoScreen(initialSettings, initialTracker, initialProgram
 			)
 		)
 		local settingNames = {
-			[PlaythroughConstants.FAINT_DETECTIONS.ON_FIRST_SLOT_FAINT] = "Lead Pok" .. Chars.accentedE .. "mon faints",
-			[PlaythroughConstants.FAINT_DETECTIONS.ON_HIGHEST_LEVEL_FAINT] = "Highest level faints",
-			[PlaythroughConstants.FAINT_DETECTIONS.ON_ENTIRE_PARTY_FAINT] = "Entire party faints"
+			[PlaythroughConstants.FAINT_DETECTIONS.ON_FIRST_SLOT_FAINT] = L("ROW_FAINT_ON_LEAD"),
+			[PlaythroughConstants.FAINT_DETECTIONS.ON_HIGHEST_LEVEL_FAINT] = L("ROW_FAINT_ON_HIGHEST_LEVEL"),
+			[PlaythroughConstants.FAINT_DETECTIONS.ON_ENTIRE_PARTY_FAINT] = L("ROW_FAINT_ON_PARTY")
 		}
 		for settingValue, name in pairs(settingNames) do
 			createFaintDetectionChoosingRow("FAINT_DETECTION", settingValue, name)
@@ -287,7 +287,7 @@ local function TrackedInfoScreen(initialSettings, initialTracker, initialProgram
 				)
 			),
 			TextField(
-				"Tracked Info",
+				L("TITLE_TRACKED_INFO"),
 				{x = 36, y = 1},
 				TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
 			)

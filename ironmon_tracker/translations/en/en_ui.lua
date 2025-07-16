@@ -174,18 +174,18 @@ return {
 	
 -- TrackedInfoScreen
 
-	TRACKED_INFO = "Tracked Info",
-	TRACKED_POKEMON_BUTTON = "Tracked Pok" .. Chars.accentedE .. "mon",
-	PAST_RUNS_BUTTON = "Past Runs",
-	STATISTICS_BUTTON = "Statistics",
-	OPEN_LOG_BUTTON = "Open a Log",
-	RESTORE_POINTS_BUTTON = "Restore Points",
-	LOAD_TRACKER_DATA_BUTTON = "Load Tracker Data",
-	RUN_OVER_LABEL = "Run is considered over when:",
-	FAINT_ON_LEAD = "Lead Pok" .. Chars.accentedE .. "mon faints",
-	FAINT_ON_HIGHEST_LEVEL = "Highest level faints",
-	FAINT_ON_PARTY = "Entire party faints",
-	TRACKED_INFO_GO_BACK = "Go back",
+	TITLE_TRACKED_INFO = "Tracked Info",
+	BUTTON_TRACKED_POKEMON = "Tracked Pok" .. Chars.accentedE .. "mon",
+	BUTTON_PAST_RUNS = "Past Runs",
+	BUTTON_STATISTICS = "Statistics",
+	BUTTON_OPEN_LOG = "Open a Log",
+	BUTTON_RESTORE_POINTS = "Restore Points",
+	BUTTON_LOAD_TRACKER_DATA = "Load Tracker Data",
+	TITLE_RUN_OVER_LABEL = "Run is considered over when:",
+	ROW_FAINT_ON_LEAD = "Lead Pok" .. Chars.accentedE .. "mon faints",
+	ROW_FAINT_ON_HIGHEST_LEVEL = "Highest level faints",
+	ROW_FAINT_ON_PARTY = "Entire party faints",
+	BUTTON_TRACKED_INFO_GO_BACK = "Go back",
 
 -- TrackedInfoScreen/TrackedPokemon
 
