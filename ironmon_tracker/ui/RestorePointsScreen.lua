@@ -38,13 +38,12 @@ local function RestorePointsScreen(initialSettings, initialTracker, initialProgr
         frame.locationLabel.setText(restorePoint.location)
         local secondsAgo = os.time() - restorePoint.seconds
         local minutesAgo = math.floor(secondsAgo / 60)
-        local text = "Just now"
+        local text = L("TEXT_RESTOREPOINT_JUST_NOW")
         if minutesAgo ~= 0 then
-            text = minutesAgo .. " minute"
             if minutesAgo == 1 then
-                text = text .. " ago"
+                text = L("TEXT_RESTOREPOINT_MINUTES_AGO_SINGULAR"):gsub("{minutes}", tostring(minutesAgo))
             else
-                text = text .. "s ago"
+                text = L("TEXT_RESTOREPOINT_MINUTES_AGO_PLURAL"):gsub("{minutes}", tostring(minutesAgo))
             end
         end
         frame.timeLabel.setText(text)
@@ -126,10 +125,10 @@ local function RestorePointsScreen(initialSettings, initialTracker, initialProgr
             ui.frames.mainInnerFrame
         )
         local lines = {
-            "Savestates are created as you",
-            "play in case of softlocks or other",
-            "major issues. You can load these",
-            "to return to an earlier state."
+            L("TEXT_SAVESTATES_DESCRIPTION_LINE_1"),
+            L("TEXT_SAVESTATES_DESCRIPTION_LINE_2"),
+            L("TEXT_SAVESTATES_DESCRIPTION_LINE_3"),
+            L("TEXT_SAVESTATES_DESCRIPTION_LINE_4")
         }
         for _, line in pairs(lines) do
             TextLabel(
@@ -173,7 +172,7 @@ local function RestorePointsScreen(initialSettings, initialTracker, initialProgr
                 )
             ),
             TextField(
-                "Back to present",
+                L("BUTTON_BACK_TO_PRESENT"),
                 {x = 9, y = 2},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -214,7 +213,7 @@ local function RestorePointsScreen(initialSettings, initialTracker, initialProgr
                 )
             ),
             TextField(
-                "Load restore point",
+                L("BUTTON_LOAD_RESTORE_POINT"),
                 {x = 8, y = 2},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -326,7 +325,7 @@ local function RestorePointsScreen(initialSettings, initialTracker, initialProgr
             TextLabel(
             Component(ui.frames.mainButtonsFrame, Box({x = 0, y = 0}, {width = 0, height = 12})),
             TextField(
-                "No restore points available.",
+                L("TEXT_NO_RESTORE_POINTS"),
                 {x = -2, y = -2},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -369,7 +368,7 @@ local function RestorePointsScreen(initialSettings, initialTracker, initialProgr
                 )
             ),
             TextField(
-                "Go back",
+                L("BUTTON_RESTORE_POINTS_GO_BACK"),
                 {x = 3, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -426,7 +425,7 @@ local function RestorePointsScreen(initialSettings, initialTracker, initialProgr
                 )
             ),
             TextField(
-                "Restore Points",
+                L("TITLE_RESTORE_POINTS"),
                 {x = 29, y = 1},
                 TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )

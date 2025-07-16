@@ -269,18 +269,18 @@ return {
 	
 -- TrackedInfoScreen/RestorePoints
 
-	RESTORE_POINTS = "Restore Points",
-	SAVESTATES_DESCRIPTION_LINE_1 = "Savestates are created as you",
-    SAVESTATES_DESCRIPTION_LINE_2 = "play in case of softlocks or other",
-    SAVESTATES_DESCRIPTION_LINE_3 = "major issues. You can load these",
-    SAVESTATES_DESCRIPTION_LINE_4 = "to return to an earlier state.",
-	BACK_TO_PRESENT = "Back to present",
-    NO_RESTORE_POINTS = "No restore points available.",
-    LOAD_RESTORE_POINT = "Load restore point",
-    RESTOREPOINT_JUST_NOW = "Just now",
-	RESTOREPOINT_MINUTES_AGO_SINGULAR = "{minutes} minute ago",
-	RESTOREPOINT_MINUTES_AGO_PLURAL = "{minutes} minutes ago",
-	RESTORE_POINTS_GO_BACK = "Go back",
+	TITLE_RESTORE_POINTS = "Wiederherstellungspunkte",
+	TEXT_SAVESTATES_DESCRIPTION_LINE_1 = "Savestates werden erstellt, während du",
+    TEXT_SAVESTATES_DESCRIPTION_LINE_2 = "spielst, für den Fall, dass Softlocks oder andere",
+    TEXT_SAVESTATES_DESCRIPTION_LINE_3 = "größere Probleme auftreten. Du kannst diese laden,",
+    TEXT_SAVESTATES_DESCRIPTION_LINE_4 = "um zu einem früheren Zustand zurückzukehren",
+	BUTTON_BACK_TO_PRESENT = "Zurück zum aktuellen Punkt",
+    TEXT_NO_RESTORE_POINTS = "Keine Wiederherstellungspunkte verfügbar.",
+    BUTTON_LOAD_RESTORE_POINT = "Wiederherstellungspunkt laden",
+    TEXT_RESTOREPOINT_JUST_NOW = "Gerade eben",
+	TEXT_RESTOREPOINT_MINUTES_AGO_SINGULAR = "Vor {minutes} Minute",
+	TEXT_RESTOREPOINT_MINUTES_AGO_PLURAL = "Vor {minutes} Minuten",
+	BUTTON_RESTORE_POINTS_GO_BACK = "Zurück",
 
 -- TrackerSetupScreen
 
