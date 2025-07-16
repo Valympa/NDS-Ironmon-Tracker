@@ -218,7 +218,7 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
                 )
             ),
             TextField(
-                "Import theme",
+                L("BUTTON_IMPORT_THEME"),
                 {x = 5, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -242,7 +242,7 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
                 )
             ),
             TextField(
-                "Export theme",
+                L("BUTTON_EXPORT_THEME"),
                 {x = 5, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -291,7 +291,7 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
                 )
             ),
             TextField(
-                "Restore defaults",
+                L("BUTTON_RESTORE_DEFAULTS"),
                 {x = 5, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -315,7 +315,7 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
                 )
             ),
             TextField(
-                "Go back",
+                L("BUTTON_EDIT_COLOR_THEME_GO_BACK"),
                 {x = 3, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -376,7 +376,7 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
                 )
             ),
             TextField(
-                "Save theme",
+                L("BUTTON_SAVE_THEME"),
                 {x = 5, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -400,7 +400,7 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
                 )
             ),
             TextField(
-                "Load theme",
+                L("BUTTON_LOAD_THEME"),
                 {x = 5, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,

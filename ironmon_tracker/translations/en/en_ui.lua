@@ -165,12 +165,12 @@ return {
 
 -- TrackerAppearanceOptionsScreen/EditColorThemeScreen
 
-	SAVE_THEME = "Save theme",
-	LOAD_THEME = "Load theme",
-	IMPORT_THEME = "Import theme",
-	EXPORT_THEME = "Export theme",
-	RESTORE_DEFAULTS = "Restore defaults",
-	EDIT_COLOR_THEME_GO_BACK = "Go back",
+	BUTTON_SAVE_THEME = "Save theme",
+	BUTTON_LOAD_THEME = "Load theme",
+	BUTTON_IMPORT_THEME = "Import theme",
+	BUTTON_EXPORT_THEME = "Export theme",
+	BUTTON_RESTORE_DEFAULTS = "Restore defaults",
+	BUTTON_EDIT_COLOR_THEME_GO_BACK = "Go back",
 	
 -- TrackedInfoScreen
 
