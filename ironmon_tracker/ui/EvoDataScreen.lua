@@ -57,7 +57,7 @@ local function EvoDataScreen(initialSettings, initialTracker, initialProgram)
 			end
 		)
 	end
-
+	
 	local function clearEvoRow(index)
 		local row = evoRows[index]
 		row.name.setText("")
@@ -152,20 +152,20 @@ local function EvoDataScreen(initialSettings, initialTracker, initialProgram)
 	local function initTopSortFrame()
 		ui.frames.topFrame =
 			Frame(
-			Box(
-				{x = Graphics.SIZES.SCREEN_WIDTH, y = 0},
-				{width = Graphics.SIZES.MAIN_SCREEN_WIDTH - 10, height = constants.TOP_FRAME_HEIGHT},
-				"Top box background color",
-				nil
-			),
-			Layout(Graphics.ALIGNMENT_TYPE.HORIZONTAL, 0, {x = 5, y = 3}),
-			ui.frames.mainFrame
-		)
+				Box(
+					{x = Graphics.SIZES.SCREEN_WIDTH, y = 0},
+					{width = Graphics.SIZES.MAIN_SCREEN_WIDTH - 10, height = constants.TOP_FRAME_HEIGHT},
+					"Top box background color",
+					nil
+				),
+				Layout(Graphics.ALIGNMENT_TYPE.HORIZONTAL, 0, {x = 5, y = 3}),
+				ui.frames.mainFrame
+			)	
 		ui.controls.sortLabel =
 			TextLabel(
 			Component(ui.frames.topFrame, Box({x = 0, y = 0}, {width = 35, height = 0})),
 			TextField(
-				"Sort by:",
+				L("TEXT_EVO_SORT_BY"),
 				{x = 0, y = 1},
 				TextStyle(
 					Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -178,9 +178,9 @@ local function EvoDataScreen(initialSettings, initialTracker, initialProgram)
 		local sortButtonsFrame =
 			Frame(Box({x = 0, y = 0}, {width = 0, height = 0}), Layout(Graphics.ALIGNMENT_TYPE.HORIZONTAL, 2), ui.frames.topFrame)
 		local buttonInfo = {
-			{name = "Name", width = 32, sortType = SORT_TYPES.NAME},
-			{name = "BST", width = 22, sortType = SORT_TYPES.BST},
-			{name = "Percent", width = 38, sortType = SORT_TYPES.PERCENT}
+			{name = L("TEXT_EVO_NAME"), width = 32, sortType = SORT_TYPES.NAME},
+			{name = L("TEXT_EVO_BST"), width = 22, sortType = SORT_TYPES.BST},
+			{name = L("TEXT_EVO_PERCENT"), width = 38, sortType = SORT_TYPES.PERCENT}
 		}
 		for _, info in pairs(buttonInfo) do
 			local button =
@@ -300,15 +300,15 @@ local function EvoDataScreen(initialSettings, initialTracker, initialProgram)
 	local function initEvoDataFrame()
 		ui.frames.evoDataOuterFrame =
 			Frame(
-			Box(
-				{x = Graphics.SIZES.SCREEN_WIDTH, y = 0},
-				{width = Graphics.SIZES.MAIN_SCREEN_WIDTH - 10, height = constants.EVO_DATA_FRAME_HEIGHT},
-				"Top box background color",
-				nil
-			),
-			Layout(Graphics.ALIGNMENT_TYPE.HORIZONTAL, 0, {x = 3, y = 3}),
-			ui.frames.mainFrame
-		)
+				Box(
+					{x = Graphics.SIZES.SCREEN_WIDTH, y = 0},
+					{width = Graphics.SIZES.MAIN_SCREEN_WIDTH - 10, height = constants.EVO_DATA_FRAME_HEIGHT},
+					"Top box background color",
+					nil
+				),
+				Layout(Graphics.ALIGNMENT_TYPE.HORIZONTAL, 0, {x = 3, y = 3}),
+				ui.frames.mainFrame
+			)
 		ui.frames.evoDataScrollFrame =
 			Frame(
 			Box(
@@ -357,7 +357,7 @@ local function EvoDataScreen(initialSettings, initialTracker, initialProgram)
 				)
 			),
 			TextField(
-				"Data from brdy and Harkenn",
+				L("TEXT_EVO_DATA_FROM"),
 				{x = 3, y = 1},
 				TextStyle(
 					Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -381,7 +381,7 @@ local function EvoDataScreen(initialSettings, initialTracker, initialProgram)
 		ui.controls.viewSiteButton =
 			TextLabel(
 			Component(
-				ui.frames.bottomFrame,
+					ui.frames.bottomFrame,
 				Box(
 					{x = 0, y = 0},
 					{width = 56, height = 16},
@@ -392,7 +392,7 @@ local function EvoDataScreen(initialSettings, initialTracker, initialProgram)
 				)
 			),
 			TextField(
-				"View Site",
+				L("BUTTON_EVO_VIEW_SITE"),
 				{x = 9, y = 2},
 				TextStyle(
 					Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -405,7 +405,7 @@ local function EvoDataScreen(initialSettings, initialTracker, initialProgram)
 		ui.controls.closeButton =
 			TextLabel(
 			Component(
-				ui.frames.bottomFrame,
+					ui.frames.bottomFrame,													
 				Box(
 					{x = 0, y = 0},
 					{width = 56, height = 16},
@@ -416,7 +416,7 @@ local function EvoDataScreen(initialSettings, initialTracker, initialProgram)
 				)
 			),
 			TextField(
-				"Close",
+				L("BUTTON_EVO_CLOSE"),
 				{x = 17, y = 2},
 				TextStyle(
 					Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -438,15 +438,15 @@ local function EvoDataScreen(initialSettings, initialTracker, initialProgram)
 		ui.frames = {}
 		ui.frames.mainFrame =
 			Frame(
-			Box(
-				{x = Graphics.SIZES.SCREEN_WIDTH, y = 0},
-				{width = Graphics.SIZES.MAIN_SCREEN_WIDTH, height = constants.MAIN_FRAME_HEIGHT},
-				"Main background color",
+				Box(
+					{x = Graphics.SIZES.SCREEN_WIDTH, y = 0},
+					{width = Graphics.SIZES.MAIN_SCREEN_WIDTH, height = constants.MAIN_FRAME_HEIGHT},
+					"Main background color",
+					nil
+				),
+				Layout(Graphics.ALIGNMENT_TYPE.VERTICAL, 0, {x = 5, y = 5}),
 				nil
-			),
-			Layout(Graphics.ALIGNMENT_TYPE.VERTICAL, 0, {x = 5, y = 5}),
-			nil
-		)
+			)
 		initTopSortFrame()
 		ui.controls.spacer =
 			TextLabel(

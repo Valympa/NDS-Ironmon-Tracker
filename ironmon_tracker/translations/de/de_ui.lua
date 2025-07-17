@@ -76,13 +76,13 @@ return {
 	
 -- MainScreen/EvoDataScreen
 
-	EVO_SORT_BY = "Sort by:",
-	EVO_NAME = "Name",
-	EVO_BST = "BST",
-	EVO_PERCENT = "Percent",
-	EVO_DATA_FROM = "Data from brdy and Harkenn",
-	EVO_VIEW_SITE = "View Site",
-	EVO_CLOSE = "Close",
+	TEXT_EVO_SORT_BY = "Sort by:",
+	TEXT_EVO_NAME = "Name",
+	TEXT_EVO_BST = "BST",
+	TEXT_EVO_PERCENT = "Prozent",
+	TEXT_EVO_DATA_FROM = "Daten von brdy und Harkenn",
+	BUTTON_EVO_VIEW_SITE = "Zeige Seite",
+	BUTTON_EVO_CLOSE = "Zurück",
 	
 -- MainScreen/RunOverScreen
 
