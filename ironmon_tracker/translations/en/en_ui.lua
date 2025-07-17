@@ -337,24 +337,25 @@ return {
 
 -- ExtraScreen	
 	
-    EXTRAS = "Extras",
+    TITLE_EXTRAS = "Extras",
 	
-	COVERAGE_CALC = "Coverage Calc",
-	DESCRIPTION_COVERAGE_1 = "Shows how many Pok" .. Chars.accentedE .. "mon",
-    DESCRIPTION_COVERAGE_2 = "your moves can hit.",
-    OPEN = "Open",
+	TITLE_COVERAGE_CALC = "Coverage Calc",
+	TEXT_DESCRIPTION_COVERAGE_LINE1 = "Shows how many Pok" .. Chars.accentedE .. "mon",
+    TEXT_DESCRIPTION_COVERAGE_LINE2 = "your moves can hit.",
+    BUTTON_COVERAGE_OPEN = "Open",
     
-	TOURNEY_TRACKER = "Tourney Tracker",
-	DESCRIPTION_TOURNEY_1 = "Auto tracks your scores",
-    DESCRIPTION_TOURNEY_2 = "for Crozwords' tourneys.",
-	TOURNEY_TRACKER_ENABLED = "Enabled",
-	CLEAR_TOURNEY_SCORES = "Clear Tourney Scores",
+	TITLE_TOURNEY_TRACKER = "Tourney Tracker",
+	TEXT_DESCRIPTION_TOURNEY_LINE1 = "Auto tracks your scores",
+    TEXT_DESCRIPTION_TOURNEY_LINE2 = "for Crozwords' tourneys.",
+	TOGGLE_TOURNEY_TRACKER_ENABLED = "Enabled",
+	BUTTON_CLEAR_TOURNEY_SCORES = "Clear Tourney Scores",
     
-    EXTRA_STREAM_CONNECT = "Stream Connect",
-	DESCRIPTION_STREAM_1 = "Connects to streaming",
-    DESCRIPTION_STREAM_2 = "services for chat interaction.",
-	OPEN_CONFIG = "Open Config",
-	EXTRA_GO_BACK = "Go back",
+    TITLE_EXTRAS_SCREEN_STREAM_CONNECT = "Stream Connect",
+	TEXT_DESCRIPTION_STREAM_LINE1 = "Connects to streaming",
+    TEXT_DESCRIPTION_STREAM_LINE2 = "services for chat interaction.",
+	BUTTON_OPEN_CONFIG = "Open Config",
+	
+	BUTTON_EXTRA_GO_BACK = "Go back",
 	
 -- ExtraScreen/CoverageCalc
 

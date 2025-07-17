@@ -66,7 +66,7 @@ local function ExtrasScreen(initialSettings, initialTracker, initialProgram)
 				)
 			),
 			TextField(
-				"Go back",
+				L("BUTTON_EXTRA_GO_BACK"),
 				{x = 3, y = 1},
 				TextStyle(
 					Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -96,41 +96,41 @@ local function ExtrasScreen(initialSettings, initialTracker, initialProgram)
 
 	local extras = {
 		{
-			name = "Coverage Calc",
+			name = L("TITLE_COVERAGE_CALC"),
 			iconImage = "coverageCalc.png",
 			imageOffset = {x = 2, y = 2},
 			descriptionRows = {
-				"Shows how many Pok" .. Chars.accentedE .. "mon",
-				"your moves can hit."
+				L("TEXT_DESCRIPTION_COVERAGE_LINE1"),
+				L("TEXT_DESCRIPTION_COVERAGE_LINE2")
 			},
 			settingsKey = "coverageCalc",
 			useEnabledButton = false,
-			buttonText = "Open",
+			buttonText = L("BUTTON_COVERAGE_OPEN"),
 			buttonFunction = onCoverageCalc
 		},
 		{
-			name = "Tourney Tracker",
+			name = L("TITLE_TOURNEY_TRACKER"),
 			iconImage = "trophy.png",
 			imageOffset = {x = 0, y = 0},
 			descriptionRows = {
-				"Auto tracks your scores",
-				"for Crozwords' tourneys."
+				L("TEXT_DESCRIPTION_TOURNEY_LINE1"),
+				L("TEXT_DESCRIPTION_TOURNEY_LINE2")
 			},
 			settingsKey = "tourneyTracker",
 			useEnabledButton = true,
-			buttonText = "Clear Tourney Scores",
+			buttonText = L("BUTTON_CLEAR_TOURNEY_SCORES"),
 			buttonFunction = onClearClick
         },
         {
-			name = "Stream Connect",
+			name = L("TITLE_EXTRAS_SCREEN_STREAM_CONNECT"),
 			iconImage = "streamerbot.png",
 			imageOffset = {x = 1, y = 1},
 			descriptionRows = {
-				"Connects to streaming",
-				"services for chat interaction."
+				L("TEXT_DESCRIPTION_STREAM_LINE1"),
+				L("TEXT_DESCRIPTION_STREAM_LINE2")
 			},
 			settingsKey = "streamerbot",
-			buttonText = "Open Config",
+			buttonText = L("BUTTON_OPEN_CONFIG"),
 			buttonFunction = OpenStreamerBotConfig
 		}
 	}
@@ -167,7 +167,7 @@ local function ExtrasScreen(initialSettings, initialTracker, initialProgram)
 			TextLabel(
 			Component(enabledFrame, Box({x = 0, y = 0}, {width = 0, height = 0}, nil, nil, false)),
 			TextField(
-				"Enabled",
+				L("TOGGLE_TOURNEY_TRACKER_ENABLED"),
 				{x = 0, y = 0},
 				TextStyle(
 					Graphics.FONT.DEFAULT_FONT_SIZE,
