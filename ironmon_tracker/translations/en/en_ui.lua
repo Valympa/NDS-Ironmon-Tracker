@@ -285,12 +285,12 @@ return {
 
 -- TrackerSetupScreen
 
-	TRACKER_SETUP = "Tracker Setup",
-	EDIT_FAVORITES = "Edit Favorites",
-	BIND = "Bind",
-	START_NEW_RUN = "Start New Run:",
-	ADD_BUTTON = "Add button",
-	CLEAR_0 = "Clear",
+	TITLE_TRACKER_SETUP = "Tracker Setup",
+	BUTTON_EDIT_FAVORITES = "Edit Favorites",
+	BUTTON_BIND = "Bind",
+	TEXT_START_NEW_RUN = "Start New Run:",
+	BUTTON_ADD_BUTTON = "Add button",
+	BUTTON_TRACKER_SETUP_CLEAR = "Clear",
 	TRACKER_SETUP_SCREEN_GO_BACK = "Go back",
 
 -- NewRunSettingsScreen
