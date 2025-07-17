@@ -86,10 +86,10 @@ return {
 	
 -- MainScreen/RunOverScreen
 
-	RUN_OVER_TITLE = "Run Over!",
-	DISMISS = "Dismiss",
-	OPEN_LOG = "Open Log",
-	VIEW_TOURNEY_SCORES = "View Tourney Scores",
+	TITLE_RUN_OVER_TITLE = "Run Over!",
+	BUTTON_RUN_OVER_DISMISS = "Dismiss",
+	BUTTON_RUN_OVER_OPEN_LOG = "Open Log",
+	BUTTON_RUN_OVER_VIEW_TOURNEY_SCORES = "View Tourney Scores",
 	
 -- MainOptionsScreen
 

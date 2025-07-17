@@ -142,7 +142,7 @@ local function RunOverScreen(initialSettings, initialTracker, initialProgram)
 				)
 			),
 			TextField(
-				"Dismiss",
+				L("BUTTON_RUN_OVER_DISMISS"),
 				{x = 7, y = 3},
 				TextStyle(
 					Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -166,7 +166,7 @@ local function RunOverScreen(initialSettings, initialTracker, initialProgram)
 				)
 			),
 			TextField(
-				"Open Log",
+				L("BUTTON_RUN_OVER_OPEN_LOG"),
 				{x = 4, y = 3},
 				TextStyle(
 					Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -204,7 +204,7 @@ local function RunOverScreen(initialSettings, initialTracker, initialProgram)
 				)
 			),
 			TextField(
-				"View Tourney Scores",
+				L("BUTTON_RUN_OVER_VIEW_TOURNEY_SCORES"),
 				{x = 13, y = 3},
 				TextStyle(
 					Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -261,7 +261,7 @@ local function RunOverScreen(initialSettings, initialTracker, initialProgram)
 				)
 			),
 			TextField(
-				"Run Over!",
+				L("TITLE_RUN_OVER_TITLE"),
 				{x = 42, y = 1},
 				TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
 			)
