@@ -69,13 +69,13 @@ local function UpdaterScreen(initialSettings, initialTracker, initialProgram)
         if success then
             settings.automaticUpdates.UPDATE_WAS_DONE = true
             program.saveSettings()
-            ui.controls.topTextLabel1.setText("Update successful! The Tracker")
-            ui.controls.topTextLabel2.setText("will now restart in 3 seconds.")
+            ui.controls.topTextLabel1.setText(L("TEXT_UPDATE_SUCCESSFUL_LINE1"))
+            ui.controls.topTextLabel2.setText(L("TEXT_UPDATE_SUCCESSFUL_LINE2"))
             frameCounters["trackerRestart"] = FrameCounter(200, restartTracker, nil, true)
         else
             ui.frames.mainFrame.resize({width = Graphics.SIZES.MAIN_SCREEN_WIDTH, height = constants.MAIN_HEIGHT_NO_UPDATE})
             ui.frames.updateInfoFrame.resize({width = Graphics.SIZES.MAIN_SCREEN_WIDTH-2*Graphics.SIZES.BORDER_MARGIN, height = constants.UPDATE_INFO_HEIGHT_NO_UPDATE})
-            ui.controls.topTextLabel1.setText("Error updating, please try again.")
+            ui.controls.topTextLabel1.setText(L("TEXT_ERROR_UPDATING"))
             ui.controls.topTextLabel2.setText("")
             ui.frames.goBackFrame.setVisibility(true)
             errored = true
@@ -88,8 +88,8 @@ local function UpdaterScreen(initialSettings, initialTracker, initialProgram)
         ui.controls.installButton.setVisibility(false)
         ui.controls.releaseNotesButton.setVisibility(false)
         ui.frames.updateInfoFrame.setLayoutPadding({x=4,y=3})
-        ui.controls.topTextLabel1.setText("Installing update, please wait...")
-        ui.controls.topTextLabel2.setText("Do not close the tracker.")
+        ui.controls.topTextLabel1.setText(L("TEXT_INSTALLING_UPDATE_WAIT"))
+        ui.controls.topTextLabel2.setText(L("TEXT_DO_NOT_CLOSE_TRACKER"))
         program.drawCurrentScreens()
 
         -- Setup delayed function calls to properly clear image caches, then update later when safe
@@ -110,7 +110,7 @@ local function UpdaterScreen(initialSettings, initialTracker, initialProgram)
                 Box({x = 0, y = 0}, {width = 40, height = constants.MAIN_TEXT_LABEL_HEIGHT})
             ),
             TextField(
-                "No update available.",
+                L("TEXT_NO_UPDATE_AVAILABLE"),
                 {x = 0, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -127,7 +127,7 @@ local function UpdaterScreen(initialSettings, initialTracker, initialProgram)
                 Box({x = 0, y = 0}, {width = 40, height = constants.MAIN_TEXT_LABEL_HEIGHT + 2})
             ),
             TextField(
-                "Current version: " .. MiscConstants.TRACKER_VERSION,
+                L("TEXT_CURRENT_VERSION") .. MiscConstants.TRACKER_VERSION,
                 {x = 0, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -168,7 +168,7 @@ local function UpdaterScreen(initialSettings, initialTracker, initialProgram)
                 )
             ),
             TextField(
-                "View Release Notes",
+                L("BUTTON_VIEW_RELEASE_NOTES"),
                 {x = 3, y = 2},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -192,7 +192,7 @@ local function UpdaterScreen(initialSettings, initialTracker, initialProgram)
                 )
             ),
             TextField(
-                "Ignore",
+                L("BUTTON_IGNORE"),
                 {x = 5, y = 3},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -216,7 +216,7 @@ local function UpdaterScreen(initialSettings, initialTracker, initialProgram)
                 )
             ),
             TextField(
-                "Install",
+                L("BUTTON_INSTALL"),
                 {x = 6, y = 3},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -259,7 +259,7 @@ local function UpdaterScreen(initialSettings, initialTracker, initialProgram)
                 )
             ),
             TextField(
-                "Tracker Updates",
+                L("TITLE_TRACKER_UPDATES_TITLE"),
                 {x = 25, y = 1},
                 TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
@@ -308,7 +308,7 @@ local function UpdaterScreen(initialSettings, initialTracker, initialProgram)
                 )
             ),
             TextField(
-                "Go back",
+                L("BUTTON_CHECK_FOR_UPDATES_GO_BACK"),
                 {x = 3, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -326,8 +326,8 @@ local function UpdaterScreen(initialSettings, initialTracker, initialProgram)
 
     function self.setAsNoUpdate()
         errored = false
-        ui.controls.topTextLabel1.setText("No update available.")
-        ui.controls.topTextLabel2.setText("Current version: " .. MiscConstants.TRACKER_VERSION)
+        ui.controls.topTextLabel1.setText(L("TEXT_NO_UPDATE_AVAILABLE"))
+        ui.controls.topTextLabel2.setText(L("TEXT_CURRENT_VERSION") .. MiscConstants.TRACKER_VERSION)
         ui.frames.installIgnoreFrame.setVisibility(false)
         ui.frames.goBackFrame.setVisibility(true)
         ui.frames.mainFrame.resize({width = Graphics.SIZES.MAIN_SCREEN_WIDTH, height = constants.MAIN_HEIGHT_NO_UPDATE})
@@ -342,8 +342,8 @@ local function UpdaterScreen(initialSettings, initialTracker, initialProgram)
     function self.setAsUpdateAvailable(newVersion)
         newestVersionString = newVersion
         errored = false
-        ui.controls.topTextLabel1.setText("New update available!")
-        ui.controls.topTextLabel2.setText("Latest version: " .. newVersion)
+        ui.controls.topTextLabel1.setText(L("TEXT_NEW_UPDATE_AVAILABLE"))
+        ui.controls.topTextLabel2.setText(L("TEXT_LATEST_VERSION") .. newVersion)
         ui.frames.installIgnoreFrame.setVisibility(true)
         ui.frames.goBackFrame.setVisibility(false)
         ui.frames.mainFrame.resize(

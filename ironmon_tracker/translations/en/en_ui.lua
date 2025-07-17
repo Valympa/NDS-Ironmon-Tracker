@@ -315,20 +315,20 @@ return {
 
 -- CheckForUpdatesScreen
 
-	TRACKER_UPDATES_TITLE = "Tracker Updates",
-	NO_UPDATE_AVAILABLE = "No update available",
-	CURRENT_VERSION = "Current version: ",
-	NEW_UPDATE_AVAILABLE = "New update available!",
-	LATEST_VERSION = "Latest version: ",
-	UPDATE_SUCCESSFUL_LINE1 = "Update successful! The Tracker",
-	UPDATE_SUCCESSFUL_LINE2 = "will now restart in 3 seconds",
-	ERROR_UPDATING = "Error updating, please try again",
-	INSTALLING_UPDATE_WAIT = "Installing update, please wait",
-	DO_NOT_CLOSE_TRACKER = "Do not close the tracker",
-	VIEW_RELEASE_NOTES = "View Release Notes",
-	IGNORE = "Ignore",
-	INSTALL = "Install",
-	CHECK_FOR_UPDATES_GO_BACK = "Go back",
+	TITLE_TRACKER_UPDATES_TITLE = "Tracker Updates",
+	TEXT_NO_UPDATE_AVAILABLE = "No update available",
+	TEXT_CURRENT_VERSION = "Current version: ",
+	TEXT_NEW_UPDATE_AVAILABLE = "New update available!",
+	TEXT_LATEST_VERSION = "Latest version: ",
+	TEXT_UPDATE_SUCCESSFUL_LINE1 = "Update successful! The Tracker",
+	TEXT_UPDATE_SUCCESSFUL_LINE2 = "will now restart in 3 seconds",
+	TEXT_ERROR_UPDATING = "Error updating, please try again",
+	TEXT_INSTALLING_UPDATE_WAIT = "Installing update, please wait",
+	TEXT_DO_NOT_CLOSE_TRACKER = "Do not close the tracker.",
+	BUTTON_VIEW_RELEASE_NOTES = "View Release Notes",
+	BUTTON_IGNORE = "Ignore",
+	BUTTON_INSTALL = "Install",
+	BUTTON_CHECK_FOR_UPDATES_GO_BACK = "Go back",
 	
 -- UpdateNotesScreen
 
