@@ -359,8 +359,8 @@ return {
 	
 -- ExtraScreen/CoverageCalc
 
-	FULLY_EVOLVED_ONLY = "Fully evolved only",
-    COVERAGE_CALC_GO_BACK = "Go back",
+	TOGGLE_FULLY_EVOLVED_ONLY = "Fully evolved only",
+    BUTTON_COVERAGE_CALC_GO_BACK = "Go back",
 	
 -- ExtraScreen/TourneyTrackerScreen
 
