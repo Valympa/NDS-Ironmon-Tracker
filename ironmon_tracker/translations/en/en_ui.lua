@@ -214,8 +214,8 @@ return {
 
 -- LogViewerScreen/PokemonOverviewScreen
 
-	LOG_VIEWER_SEARCH_INSTRUCTION = "Click the keys below to search any pokemon:",
-	LOG_VIEWER_STATS_BUTTON = "Stats",
+	TEXT_LOG_VIEWER_SEARCH_INSTRUCTION = "Click the keys below to search any pokemon:",
+	BUTTON_LOG_VIEWER_STATS = "Stats",
 
 -- LogViewerScreen/Stats
 

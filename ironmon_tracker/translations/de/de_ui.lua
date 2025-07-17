@@ -212,9 +212,9 @@ return {
 -- TrackedInfoScreen/(Open a Log)LogViewerScreen
 
 -- LogViewerScreen/PokemonOverviewScreen
-
-	LOG_VIEWER_SEARCH_INSTRUCTION = "Click the keys below to search any pokemon:",
-	LOG_VIEWER_STATS_BUTTON = "Stats",
+	
+	TEXT_LOG_VIEWER_SEARCH_INSTRUCTION = "Klicke die Tasten unten, um ein Pokemon zu suchen:",
+	BUTTON_LOG_VIEWER_STATS = "Stats",
 
 -- LogViewerScreen/Stats
 
