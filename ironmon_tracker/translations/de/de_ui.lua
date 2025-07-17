@@ -287,28 +287,30 @@ return {
 	TITLE_TRACKER_SETUP = "Tracker Einstellung",
 	BUTTON_EDIT_FAVORITES = "Favoriten ändern",
 	BUTTON_BIND = "...",
-	TEXT_START_NEW_RUN = "Neuer Run Kombi:",
+	TEXT_START_NEW_RUN = "Kombi für neuen Run:",
 	BUTTON_ADD_BUTTON = "Button hinzufügen",
 	BUTTON_TRACKER_SETUP_CLEAR = "Löschen",
 	TRACKER_SETUP_SCREEN_GO_BACK = "Zurück",
 
 -- NewRunSettingsScreen
 
-	NEW_RUN_SETTINGS = "New Run Settings",
-	NEW_RUN_TYPE = "New Run Type",
-	USE_BATCH = "Use batch of seeds",
-	GENERATE_ROMS = "Generate ROMs",
-	NEW_RUN_COMBO = "New Run Combo:",
-	BATCH_SETUP = "Batch Setup",
-	ROMS_FOLDER = "ROMs Folder",
-	ROM_CREATION = "ROM Creation",
-	ROM_TO_RANDOMIZE = "ROM to randomize",
-	RANDOMIZER_JAR = "Randomizer JAR",
-	SETTINGS_FILE = "Settings file",
-	SAVE_PROFILE = "Save Profile",
-	LOAD_PROFILE = "Load Profile",
-	NEW_RUN_SETTINGS_GO_BACK = "Go back",
-	MISSING_FILES_WARNING = "Missing files have been detected. Fill these in before saving a profile.",
+	TITLE_NEW_RUN_SETTINGS = "Run Startoptionen",
+	TEXT_NEW_RUN_TYPE = "Art des Runs",
+	TOGGLE_USE_BATCH = "Mehrere Seeds verwenden",
+	TOGGLE_GENERATE_ROMS = "Generiere ROMs",
+	TEXT_NEW_RUN_COMBO = "Kombi für neuen Run:",
+	
+	TITLE_BATCH_SETUP = "Batch Einstellung",
+	TEXT_ROMS_FOLDER = "ROMs Ordner",
+	
+	TITLE_ROM_CREATION = "ROM Erstellung",
+	TEXT_ROM_TO_RANDOMIZE = "ROM zum randomizen",
+	TEXT_RANDOMIZER_JAR = "JAR des Randomizers",
+	TEXT_SETTINGS_FILE = "Settings-Datei",
+	BUTTON_SAVE_PROFILE = "Speichere Profile",
+	BUTTON_LOAD_PROFILE = "Lade Profile",
+	BUTTON_NEW_RUN_SETTINGS_GO_BACK = "Zurück",
+	TEXT_MISSING_FILES_WARNING = "Es wurden fehlende Dateien entdeckt. Füllen Sie diese aus, bevor Sie ein Profil speichern.",
 
 -- CheckForUpdatesScreen
 

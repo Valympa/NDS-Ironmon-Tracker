@@ -295,21 +295,23 @@ return {
 
 -- NewRunSettingsScreen
 
-	NEW_RUN_SETTINGS = "New Run Settings",
-	NEW_RUN_TYPE = "New Run Type",
-	USE_BATCH = "Use batch of seeds",
-	GENERATE_ROMS = "Generate ROMs",
-	NEW_RUN_COMBO = "New Run Combo:",
-	BATCH_SETUP = "Batch Setup",
-	ROMS_FOLDER = "ROMs Folder",
-	ROM_CREATION = "ROM Creation",
-	ROM_TO_RANDOMIZE = "ROM to randomize",
-	RANDOMIZER_JAR = "Randomizer JAR",
-	SETTINGS_FILE = "Settings file",
-	SAVE_PROFILE = "Save Profile",
-	LOAD_PROFILE = "Load Profile",
-	NEW_RUN_SETTINGS_GO_BACK = "Go back",
-	MISSING_FILES_WARNING = "Missing files have been detected. Fill these in before saving a profile.",
+	TITLE_NEW_RUN_SETTINGS = "New Run Settings",
+	TEXT_NEW_RUN_TYPE = "New Run Type",
+	TOGGLE_USE_BATCH = "Use batch of seeds",
+	TOGGLE_GENERATE_ROMS = "Generate ROMs",
+	TEXT_NEW_RUN_COMBO = "New Run Combo:",
+	
+	TITLE_BATCH_SETUP = "Batch Setup",
+	TEXT_ROMS_FOLDER = "ROMs Folder",
+	
+	TITLE_ROM_CREATION = "ROM Creation",
+	TEXT_ROM_TO_RANDOMIZE = "ROM to randomize",
+	TEXT_RANDOMIZER_JAR = "Randomizer JAR",
+	TEXT_SETTINGS_FILE = "Settings file",
+	BUTTON_SAVE_PROFILE = "Save Profile",
+	BUTTON_LOAD_PROFILE = "Load Profile",
+	BUTTON_NEW_RUN_SETTINGS_GO_BACK = "Go back",
+	TEXT_MISSING_FILES_WARNING = "Missing files have been detected. Fill these in before saving a profile.",
 
 -- CheckForUpdatesScreen
 

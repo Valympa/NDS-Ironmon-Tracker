@@ -311,7 +311,7 @@ local function TrackerSetupScreen(initialSettings, initialTracker, initialProgra
                 )
             ),
             TextField(
-                "New Run Combo:",
+                L("TEXT_NEW_RUN_COMBO"),
                 {x = 0, y = 0},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -380,15 +380,15 @@ local function TrackerSetupScreen(initialSettings, initialTracker, initialProgra
                 )
             ),
             TextField(
-                "New Run Type",
+                L("TEXT_NEW_RUN_TYPE"),
                 {x = -1, y = 0},
                 TextStyle(11, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
         )
         local setting = "LOAD_TYPE"
         local typeSettings = {
-            ["USE_BATCH"] = "Use batch of seeds",
-            ["GENERATE_ROMS"] = "Generate ROMs"
+            ["USE_BATCH"] = L("TOGGLE_USE_BATCH"),
+            ["GENERATE_ROMS"] = L("TOGGLE_GENERATE_ROMS")
         }
         local order = {"USE_BATCH", "GENERATE_ROMS"}
         for _, settingValue in pairs(order) do
@@ -428,12 +428,12 @@ local function TrackerSetupScreen(initialSettings, initialTracker, initialProgra
                 )
             ),
             TextField(
-                "Batch Setup",
+                L("TITLE_BATCH_SETUP"),
                 {x = 36, y = 1},
                 TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
         )
-        createPathSetupFrame(ui.frames.mainBatchFrame, "ROMs Folder", "ROMS_FOLDER_PATH", ".nds", "", true, true)
+        createPathSetupFrame(ui.frames.mainBatchFrame, L("TEXT_ROMS_FOLDER"), "ROMS_FOLDER_PATH", ".nds", "", true, true)
     end
 
     local function saveProfile(filePath)
@@ -452,7 +452,7 @@ local function TrackerSetupScreen(initialSettings, initialTracker, initialProgra
             if settings.quickLoad[settingName] == nil or settings.quickLoad[settingName] == "" then
                 forms.destroyall()
                 FormsUtils.popupDialog(
-                    "Missing files have been detected. Fill these in before saving a profile.",
+                    L("TEXT_MISSING_FILES_WARNING"),
                     250,
                     120,
                     FormsUtils.POPUP_DIALOG_TYPES.WARNING,
@@ -505,7 +505,7 @@ local function TrackerSetupScreen(initialSettings, initialTracker, initialProgra
             Layout(Graphics.ALIGNMENT_TYPE.HORIZONTAL, 6, {x = 5, y = 0}),
             ui.frames.mainROMGenerateFrame
         )
-        local names = {"Save Profile", "Load Profile"}
+        local names = {L("BUTTON_SAVE_PROFILE"), L("BUTTON_LOAD_PROFILE")}
         local functions = {onSaveProfileClick, onLoadProfileClick}
         for i = 1, 2, 1 do
             local button =
@@ -570,7 +570,7 @@ local function TrackerSetupScreen(initialSettings, initialTracker, initialProgra
                 )
             ),
             TextField(
-                "ROM Creation",
+                L("TITLE_ROM_CREATION"),
                 {x = 30, y = 1},
                 TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
@@ -578,19 +578,19 @@ local function TrackerSetupScreen(initialSettings, initialTracker, initialProgra
         local settingsData = {
             {
                 settingKey = "ROM_PATH",
-                labelName = "ROM to randomize",
+                labelName = L("TEXT_ROM_TO_RANDOMIZE"),
                 extension = ".nds",
                 relativePath = ""
             },
             {
                 settingKey = "JAR_PATH",
-                labelName = "Randomizer JAR",
+                labelName = L("TEXT_RANDOMIZER_JAR"),
                 extension = ".jar",
                 relativePath = ""
             },
             {
                 settingKey = "SETTINGS_PATH",
-                labelName = "Settings file",
+                labelName = L("TEXT_SETTINGS_FILE"),
                 extension = ".rnqs",
                 relativePath = Paths.SLASH .. "ironmon_tracker" .. Paths.SLASH .. "settings"
             }
@@ -636,7 +636,7 @@ local function TrackerSetupScreen(initialSettings, initialTracker, initialProgra
                 )
             ),
             TextField(
-                "New Run Settings",
+                L("TITLE_NEW_RUN_SETTINGS"),
                 {x = 22, y = 1},
                 TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
@@ -673,7 +673,7 @@ local function TrackerSetupScreen(initialSettings, initialTracker, initialProgra
                 )
             ),
             TextField(
-                "Go back",
+                L("BUTTON_NEW_RUN_SETTINGS_GO_BACK"),
                 {x = 3, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
