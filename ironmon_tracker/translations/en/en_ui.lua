@@ -332,8 +332,8 @@ return {
 	
 -- UpdateNotesScreen
 
-	UPDATE_TITLE = "Update ",
-	UPDATE_NOTES_SCREEN_CLOSE = "Close",
+	TEXT_UPDATE_NOTES = "Update ",
+	BUTTON_UPDATE_NOTES_SCREEN_CLOSE = "Close",
 
 -- ExtraScreen	
 	

@@ -330,9 +330,9 @@ return {
 	BUTTON_CHECK_FOR_UPDATES_GO_BACK = "Zurück",
 	
 -- UpdateNotesScreen
-
-	UPDATE_TITLE = "Update ",
-	UPDATE_NOTES_SCREEN_CLOSE = "Close",
+	
+	TEXT_UPDATE_NOTES = "Update ",
+	BUTTON_UPDATE_NOTES_SCREEN_CLOSE = "Schließen",
 
 -- ExtraScreen	
 	
