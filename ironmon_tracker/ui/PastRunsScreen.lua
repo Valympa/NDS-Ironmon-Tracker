@@ -219,7 +219,7 @@ local function PastRunsScreen(initialSettings, initialTracker, initialProgram)
                 )
             ),
             TextField(
-                L("BUTTON_SWAP"),
+                L("BUTTON_PAST_RUNS_SWAP"),
                 {x = 3, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -278,7 +278,7 @@ local function PastRunsScreen(initialSettings, initialTracker, initialProgram)
                 )
             ),
             TextField(
-                L("BUTTON_DELETE_0_BADGES_RUNS"),
+                L("BUTTON_PAST_RUNS_DELETE_0_BADGES_RUNS"),
                 {x = 2, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -343,7 +343,7 @@ local function PastRunsScreen(initialSettings, initialTracker, initialProgram)
                 )
             ),
             TextField(
-                L("TITLE_MINIMUM_BADGES"),
+                L("TITLE_PAST_RUNS_MINIMUM_BADGES"),
                 {x = 28, y = 2},
                 TextStyle(11, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
@@ -391,7 +391,7 @@ local function PastRunsScreen(initialSettings, initialTracker, initialProgram)
                 )
             ),
             TextField(
-                L("TITLE_SORT_BY"),
+                L("TITLE_PAST_RUNS_SORT_BY"),
                 {x = 54, y = 2},
                 TextStyle(11, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
@@ -403,9 +403,9 @@ local function PastRunsScreen(initialSettings, initialTracker, initialProgram)
             sortFrame
         )
         local buttonNames = {
-            L("BUTTON_NEWEST"),
-            L("BUTTON_OLDEST"),
-            L("BUTTON_A_Z")
+            L("BUTTON_PAST_RUNS_NEWEST"),
+            L("BUTTON_PAST_RUNS_OLDEST"),
+            L("BUTTON_PAST_RUNS_A_Z")
         }
         local widths = {
             37,
