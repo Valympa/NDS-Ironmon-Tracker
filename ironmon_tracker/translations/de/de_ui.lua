@@ -69,10 +69,10 @@ return {
 	
 -- MainScreen/RandomBallScreen
 
-	RANDOM_BALL_LEFT = "Left",
-	RANDOM_BALL_MIDDLE = "Middle",
-	RANDOM_BALL_RIGHT = "Right",
-	RANDOM_BALL_LABEL = "Random ball: ",
+	TEXT_RANDOM_BALL_LEFT = "Links",
+	TEXT_RANDOM_BALL_MIDDLE = "Mitte",
+	TEXT_RANDOM_BALL_RIGHT = "Rechts",
+	TEXT_RANDOM_BALL_LABEL = "Zufalls-Ball: ",
 	
 -- MainScreen/EvoDataScreen
 
