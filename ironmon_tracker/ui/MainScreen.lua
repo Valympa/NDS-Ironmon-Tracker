@@ -234,7 +234,7 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
                 HoverFrameFactory.createHoverTextFrame(
                 "Bottom box background color",
                 "Bottom box border color",
-                "This Pok" .. Chars.accentedE .. "mon does not learn any moves.",
+                L("TEXT_MAIN_SCREEN_POKEMON_DOES_NOT_LEARN_MOVES"),
                 "Bottom box text color",
                 126
             )
@@ -270,7 +270,7 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
                 local infoHoverParams = {
                     BGColorKey = "Top box background color",
                     BGColorFillKey = "Top box border color",
-                    text = "You currently do not have any " .. itemType:lower() .. " items.",
+                    text = L("TEXT_MAIN_SCREEN_DO_NOT_HAVE_ITEMS"):gsub("{type}", itemType:lower()),
                     textColorKey = "Top box text color",
                     width = 114,
                     alignment = Graphics.HOVER_ALIGNMENT_TYPE.ALIGN_ABOVE
@@ -578,7 +578,7 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
         local abilityHoverParams = hoverListeners.abilityHoverListener.getOnHoverParams()
         local itemHoverParams = hoverListeners.heldItemHoverListener.getOnHoverParams()
         readStatPredictions(currentPokemon.pokemonID)
-        ui.controls.pokemonHP.setText("HP: ?/?")
+        ui.controls.pokemonHP.setText(L("TEXT_MAIN_SCREEN_HP_PLACEHOLDER"))
         abilityHoverParams.text = ""
         itemHoverParams.text = ""
         local note = tracker.getNote(currentPokemon.pokemonID)
@@ -597,8 +597,8 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
             ui.controls.noteLabels[2].setText(MiscUtils.trimWhitespace(text) .. "...")
             hoverListeners.enemyNoteHoverListener.getOnHoverParams().text = note
         end
-        ui.controls.heldItem.setText("Total seen: " .. tracker.getAmountSeen(currentPokemon.pokemonID))
-        ui.controls.abilityDetails.setText("Last level: " .. tracker.getLastLevelSeen(currentPokemon.pokemonID))
+        ui.controls.heldItem.setText(L("TEXT_MAIN_SCREEN_TOTAL_SEEN") .. tracker.getAmountSeen(currentPokemon.pokemonID))
+        ui.controls.abilityDetails.setText(L("TEXT_MAIN_SCREEN_LAST_LEVEL") .. tracker.getLastLevelSeen(currentPokemon.pokemonID))
         ui.controls.healsLabel.setText("")
         ui.controls.statusItemsLabel.setText("")
         local bookmarked = tracker.isMarked(currentPokemon.pokemonID)
@@ -626,7 +626,7 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
                 ui.controls[statName .. "StatName"].resize({width = 25, height = 10})
                 ui.controls[statName .. "StatNumber"].setText(stat)
                 if statName ~= "HP" and settings.appearance.BLIND_MODE then
-                    ui.controls[statName .. "StatNumber"].setText("?")
+                    ui.controls[statName .. "StatNumber"].setText(L("TEXT_MAIN_SCREEN_UNKNOWN"))
                 end
                 local color = DrawingUtils.getNatureColor(statName, currentPokemon.nature)
                 local namePosition = ui.controls[statName .. "StatName"].getPosition()
@@ -674,9 +674,9 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
         if currentPokemon.heldItem ~= nil then
             local heldItem = ItemData.ITEMS[currentPokemon.heldItem]
             itemDescription = heldItem.description
-            ui.controls.mainNoteLabel.setText("Item: " .. heldItem.name)
+            ui.controls.mainNoteLabel.setText(L("TEXT_MAIN_SCREEN_ITEM") .. heldItem.name)
         else
-            ui.controls.mainNoteLabel.setText("Item: None")
+            ui.controls.mainNoteLabel.setText(L("TEXT_MAIN_SCREEN_ITEM_NONE"))
         end
         hoverListeners.heldItemTeamInfo.getOnHoverParams().text = itemDescription
         hoverListeners.abilityHoverListener.getOnHoverParams().text = ""
@@ -805,8 +805,8 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
         end
         hoverListeners.statusItemsHoverListener.setOnHoverParams({items = program.getStatusItems(), itemType = "Status"})
         hoverListeners.healingItemsHoverListener.setOnHoverParams({items = program.getHealingItems(), itemType = "Healing"})
-        ui.controls.healsLabel.setText("Heals: " .. healingTotals.healing .. " (" .. healingTotals.numHeals .. ")")
-        ui.controls.statusItemsLabel.setText("Status items: " .. statusTotals)
+        ui.controls.healsLabel.setText(L("TEXT_MAIN_SCREEN_HEALS") .. healingTotals.healing .. " (" .. healingTotals.numHeals .. ")")
+        ui.controls.statusItemsLabel.setText(L("TEXT_MAIN_SCREEN_STATUS_ITEMS") .. statusTotals)
         ui.frames.enemyNoteFrame.setVisibility(isEnemy or inPastRunView)
         ui.controls.noteIcon.setVisibility(not inPastRunView)
         ui.frames.healFrame.setVisibility(not isEnemy and not inPastRunView)
@@ -819,9 +819,9 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
         local badNatures = ItemData.NATURE_SPECIFIC_BERRIES[heldItemName]
         local natureName = MiscData.NATURES[currentPokemon.nature + 1]
         if badNatures[natureName] then
-            heldItemDescription = heldItemDescription .. " Your Pok" .. Chars.accentedE .. "mon will dislike this."
+            heldItemDescription = heldItemDescription .. L("TEXT_MAIN_SCREEN_POKEMON_DISLIKE")
         else
-            heldItemDescription = heldItemDescription .. " Yum!"
+            heldItemDescription = heldItemDescription .. L("TEXT_MAIN_SCREEN_YUM")
         end
         return heldItemDescription
     end
@@ -847,10 +847,10 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
                 y = position.y + 3
             }
             if progress >= 1 then
-                evo = "READY"
+                evo = L("TEXT_MAIN_SCREEN_EVO_READY")
             end
         end
-        ui.controls.pokemonLevelAndEvo.setText("Lv. " .. currentPokemon.level .. " (" .. evo .. ")")
+        ui.controls.pokemonLevelAndEvo.setText(L("TEXT_MAIN_SCREEN_LEVEL") .. currentPokemon.level .. " (" .. evo .. ")")
         if hoveringOverLevel then
             ui.controls.pokemonLevelAndEvo.setText("")
         end
@@ -880,10 +880,10 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
         setUpEvo(isEnemy)
         local pokemonHoverParams = hoverListeners.pokemonHoverListener.getOnHoverParams()
         pokemonHoverParams.pokemon = currentPokemon
-        ui.controls.pokemonHP.setText("HP: " .. currentPokemon.curHP .. "/" .. currentPokemon.stats.HP)
+        ui.controls.pokemonHP.setText(L("TEXT_MAIN_SCREEN_HP_LIVE") .. currentPokemon.curHP .. "/" .. currentPokemon.stats.HP)
         local abilityName = AbilityData.ABILITIES[currentPokemon.ability + 1].name
         if settings.appearance.BLIND_MODE then
-            abilityName = "?"
+            abilityName = L("TEXT_MAIN_SCREEN_UNKNOWN")
         end
         ui.controls.abilityDetails.setText(abilityName)
         ui.controls.heldItem.setText(heldItemInfo.name)
@@ -1054,11 +1054,11 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
             ui.controls.noteLabels[1].setText(pastRun.getDate())
             ui.controls.noteLabels[2].setText(pastRun.getLocation())
         else
-            ui.controls.mainNoteLabel.setText("No data was found.")
+            ui.controls.mainNoteLabel.setText(L("TEXT_MAIN_SCREEN_NO_DATA_FOUND"))
         end
         if pastRun.getProgress() == PlaythroughConstants.PROGRESS.WON then
             ui.controls.pastRunLocationIcon.setVisibility(false)
-            ui.controls.noteLabels[2].setText("You won!")
+            ui.controls.noteLabels[2].setText(L("TEXT_MAIN_SCREEN_YOU_WON"))
         end
     end
 
