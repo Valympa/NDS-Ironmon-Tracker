@@ -377,20 +377,19 @@ return {
 	TEXT_TOURNEY_TRACKER_POINT_SINGULAR = " Punkt",
 	TEXT_TOURNEY_TRACKER_POINT_PLURAL = " Punkte",
 	
--- ExtraScreen/TourneyTrackerScreen
+-- ExtraScreen/StreamerbotConfigScreen
 	
-	STREAM_CONNECT = "Stream Connect",
-	CONNECTION_STATUS = "Connection Status:",
-	CONNECTION_ESTABLISHED = "Online: Connection Established.",
-	CONNECTION_FOLDER = "Connection Folder",
-	SET = "Set",
-	CONNECT = "Connect",
-	DISCONNECT = "Disconnect",
-	STREAMERBOT_CODE = "Streamerbot Code",
-	ROLE_PERMISSIONS = "Role Permissions",
-	SELECT_JSON_FILE = "SELECT ANY JSON FILE",
-	FILTER_JSON = "Json File (*.JSON)|*.json|All files (*.*)|*.*",
-	HELP = "Help",
-	TOURNEY_TRACKER_GO_BACK = "Go back"
+	TITLE_STREAM_CONNECT = "Verbindung zum Stream",
+	TEXT_STREAM_CONNECTION_STATUS = "Verbindungsstatus:",
+	TEXT_STREAM_CONNECTION_ESTABLISHED = "Online: Verbindung hergestellt.",
+	TEXT_STREAM_CONNECTION_FOLDER = "Verbindungsordner",
+	BUTTON_STREAM_SET = "Wähle",
+	SELECT_JSON_FILE = "WÄHLE EINE JSON DATEI",
+	BUTTON_STREAM_CONNECT = "Verbinden",
+	BUTTON_STREAM_DISCONNECT = "Trennen",
+	BUTTON_STREAMERBOT_CODE = "Streamerbot Code",
+	BUTTON_ROLE_PERMISSIONS = "Rollen-Berechtigung",
+	BUTTON_STREAM_HELP = "Hilfe",
+	BUTTON_STREAM_GO_BACK = "Zurück"
 
 }	

@@ -46,7 +46,7 @@ local function StreamerbotConfigScreen(initialSettings, initialTracker, initialP
     local function onSetFolderClick()
         local existingPath = tostring(Network.Options["DataFolder"]) or ""
         local filterOptions = "Json File (*.JSON)|*.json|All files (*.*)|*.*"
-        local newPath = forms.openfile("SELECT ANY JSON FILE", existingPath, filterOptions)
+        local newPath = forms.openfile(L("SELECT_JSON_FILE"), existingPath, filterOptions)
         if newPath ~= nil and newPath ~= "" then
             newPath = newPath:sub(0, newPath:match("^.*()" .. Paths.SLASH) - 1)
             if not string.find(Network.Options["DataFolder"], newPath) then
@@ -70,10 +70,10 @@ local function StreamerbotConfigScreen(initialSettings, initialTracker, initialP
 
     local function updateConnectButton()
         if Network.isConnected() then
-            ui.controls.connectDisconnect.setText("Disconnect")
+            ui.controls.connectDisconnect.setText(L("BUTTON_STREAM_DISCONNECT"))
             ui.controls.connectDisconnect.setTextOffset({x=6,y=1})
         else
-            ui.controls.connectDisconnect.setText("Connect")
+            ui.controls.connectDisconnect.setText(L("BUTTON_STREAM_CONNECT"))
             ui.controls.connectDisconnect.setTextOffset({x=11,y=1})
         end
         refreshStatus()
@@ -210,7 +210,7 @@ local function StreamerbotConfigScreen(initialSettings, initialTracker, initialP
                 )
             ),
             TextField(
-                "Set",
+                L("BUTTON_STREAM_SET"),
                 {x = 9, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -267,13 +267,13 @@ local function StreamerbotConfigScreen(initialSettings, initialTracker, initialP
             {
                 iconName = "UPDATER_ICON",
                 offset = {x = 2, y = 2},
-                text = "Streamerbot Code",
+                text = L("BUTTON_STREAMERBOT_CODE"),
                 onClick = Network.openGetCodeWindow
             },
             {
                 iconName = "TRACKED_INFO_ICON",
                 offset = {x = 4, y = 3},
-                text = "Role Permissions",
+                text = L("BUTTON_ROLE_PERMISSIONS"),
                 onClick = Network.openCommandRolePermissionsPrompt
             }
         }
@@ -319,7 +319,7 @@ local function StreamerbotConfigScreen(initialSettings, initialTracker, initialP
                 )
             ),
             TextField(
-                "Connection Status:",
+                L("TEXT_STREAM_CONNECTION_STATUS"),
                 {x = -1, y = -1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -345,7 +345,7 @@ local function StreamerbotConfigScreen(initialSettings, initialTracker, initialP
                 )
             ),
             TextField(
-                "Online: Connection Established.",
+                L("TEXT_STREAM_CONNECTION_ESTABLISHED"),
                 {x = 3, y = 0},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -356,7 +356,7 @@ local function StreamerbotConfigScreen(initialSettings, initialTracker, initialP
             )
         )
 
-        createPathSetupFrame(ui.frames.statusFolderFrame, "Connection Folder")
+        createPathSetupFrame(ui.frames.statusFolderFrame, L("TEXT_STREAM_CONNECTION_FOLDER"))
         createConnectButton()
     end
 
@@ -390,7 +390,7 @@ local function StreamerbotConfigScreen(initialSettings, initialTracker, initialP
                 )
             ),
             TextField(
-                "Stream Connect",
+                L("TITLE_STREAM_CONNECT"),
                 {x = 24, y = 1},
                 TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
@@ -425,7 +425,7 @@ local function StreamerbotConfigScreen(initialSettings, initialTracker, initialP
             )
         ),
         TextField(
-            "Help",
+            L("BUTTON_STREAM_HELP"),
             {x = 5, y = 1},
             TextStyle(
                 Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -450,7 +450,7 @@ local function StreamerbotConfigScreen(initialSettings, initialTracker, initialP
                 )
             ),
             TextField(
-                "Go back",
+                L("BUTTON_STREAM_GO_BACK"),
                 {x = 3, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
