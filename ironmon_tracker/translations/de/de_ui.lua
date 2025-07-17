@@ -363,19 +363,19 @@ return {
 	
 -- ExtraScreen/TourneyTrackerScreen
 
-	SEED = "Seed ",
-	SEED_SCORE = "Seed Score:",
-	CUMULATIVE_SCORE = "Cumulative Score:",
-	MILESTONES = "Milestones",
-	BONUSES = "Bonuses",
-	SELECT_ONE_TO_ADD = "Select One to Add:",
-	SELECT_ONE_TO_REMOVE = "Select One to Remove:",
-	EXPORT_SCORES = "Export Scores",
-	CLOSE = "Close",
-	NEW_TOTAL_SINGULAR = "New total: ",
-	NEW_TOTAL_PLURAL = "New total: ",
-	POINT_SINGULAR = " point",
-	POINT_PLURAL = " points",
+	TEXT_TOURNEY_TRACKER_SEED = "Seed ",
+	TEXT_TOURNEY_TRACKER_SEED_SCORE = "Seed-Punkte:",
+	TEXT_TOURNEY_TRACKER_CUMULATIVE_SCORE = "Gesamtpunktzahl:",
+	TITLE_TOURNEY_TRACKER_MILESTONES = "Meilensteine",
+	TITLE_TOURNEY_TRACKER_BONUSES = "Aktuelle Boni:",
+	TEXT_TOURNEY_TRACKER_SELECT_ONE_TO_ADD = "Zum Hinzufügen wählen:",
+	TEXT_TOURNEY_TRACKER_SELECT_ONE_TO_REMOVE = "Zum Entfernen wählen:",
+	BUTTON_TOURNEY_TRACKER_EXPORT_SCORES = "Exportieren",
+	BUTTON_TOURNEY_TRACKER_CLOSE = "Schließen",
+	TEXT_TOURNEY_TRACKER_NEW_TOTAL_SINGULAR = "Neue Gesamtsumme: ",
+	TEXT_TOURNEY_TRACKER_NEW_TOTAL_PLURAL = "Neue Gesamtesumme: ",
+	TEXT_TOURNEY_TRACKER_POINT_SINGULAR = " Punkt",
+	TEXT_TOURNEY_TRACKER_POINT_PLURAL = " Punkte",
 	
 -- ExtraScreen/TourneyTrackerScreen
 	
