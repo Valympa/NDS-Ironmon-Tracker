@@ -56,7 +56,7 @@ local function TitleScreen(initialSettings, initialTracker, initialProgram)
 				text = text .. ", "
 			end
 		end
-		return mapping.title:gsub("%%data%%", text)
+		return mapping.title:gsub("{data}", text)
 	end
 
 	local function hasEnoughData(statistics)
@@ -78,52 +78,52 @@ local function TitleScreen(initialSettings, initialTracker, initialProgram)
 		local dataEntry = statisticData[dataEntryKey]
 		local total = tonumber(dataEntry[2])
 		local percent = string.format("%.1f", total / runAmount * 100) .. "%"
-		return mapping.title:gsub("%%percent%%", percent .. "%")
+		return mapping.title:gsub("{percent}", percent)
 	end
 
 	local percentStatisticMappings = {
 		{
-			title = "You get out of the lab %percent% of the time.",
+			title = L("TEXT_TITLE_SCREEN_PERCENT_STAT_1"),
 			statKey = 1,
 			dataEntryKey = 1
 		},
 		{
-			title = "You run sub 300 BST Pok" .. Chars.accentedE .. "mon %percent% of the time.",
+			title = L("TEXT_TITLE_SCREEN_PERCENT_STAT_2"),
 			statKey = 2,
 			dataEntryKey = 1
 		},
 		{
-			title = "You run 300 - 400 BST Pok" .. Chars.accentedE .. "mon %percent% of the time.",
+			title = L("TEXT_TITLE_SCREEN_PERCENT_STAT_3"),
 			statKey = 2,
 			dataEntryKey = 2
 		},
 		{
-			title = "You run 400 - 500 BST Pok" .. Chars.accentedE .. "mon %percent% of the time.",
+			title = L("TEXT_TITLE_SCREEN_PERCENT_STAT_4"),
 			statKey = 2,
 			dataEntryKey = 3
 		},
 		{
-			title = "You run 500+ BST Pok" .. Chars.accentedE .. "mon %percent% of the time.",
+			title = L("TEXT_TITLE_SCREEN_PERCENT_STAT_5"),
 			statKey = 2,
 			dataEntryKey = 4
 		},
 		{
-			title = "You lose to sub 300 BST Pok" .. Chars.accentedE .. "mon %percent% of the time.",
+			title = L("TEXT_TITLE_SCREEN_PERCENT_STAT_6"),
 			statKey = 3,
 			dataEntryKey = 1
 		},
 		{
-			title = "You lose to 300 - 400 BST Pok" .. Chars.accentedE .. "mon %percent% of the time.",
+			title = L("TEXT_TITLE_SCREEN_PERCENT_STAT_7"),
 			statKey = 3,
 			dataEntryKey = 2
 		},
 		{
-			title = "You lose to 400 - 500 BST Pok" .. Chars.accentedE .. "mon %percent% of the time.",
+			title = L("TEXT_TITLE_SCREEN_PERCENT_STAT_8"),
 			statKey = 3,
 			dataEntryKey = 3
 		},
 		{
-			title = "You lose to 500+ BST Pok" .. Chars.accentedE .. "mon %percent% of the time.",
+			title = L("TEXT_TITLE_SCREEN_PERCENT_STAT_9"),
 			statKey = 3,
 			dataEntryKey = 4
 		}
@@ -132,45 +132,45 @@ local function TitleScreen(initialSettings, initialTracker, initialProgram)
 	local basicStatisticMappings = {
 		--types
 		{
-			title = "You use %data% types the most.",
+			title = L("TEXT_TITLE_SCREEN_BASIC_STAT_1"),
 			statKey = 4,
 			amount = 3
 		},
 		{
-			title = "You lose to %data% types the most.",
+			title = L("TEXT_TITLE_SCREEN_BASIC_STAT_2"),
 			statKey = 5,
 			amount = 3
 		},
 		--pokemon
 		{
-			title = "You run %data% the most.",
+			title = L("TEXT_TITLE_SCREEN_BASIC_STAT_3"),
 			statKey = 6,
 			amount = 3
 		},
 		{
-			title = "You lose to %data% the most.",
+			title = L("TEXT_TITLE_SCREEN_BASIC_STAT_4"),
 			statKey = 7,
 			amount = 3
 		},
 		--moves
 		{
-			title = "Your moves are %data% the most.",
+			title = L("TEXT_TITLE_SCREEN_BASIC_STAT_5"),
 			statKey = 8,
 			amount = 3
 		},
 		{
-			title = "Your enemies have %data% the most.",
+			title = L("TEXT_TITLE_SCREEN_BASIC_STAT_6"),
 			statKey = 9,
 			amount = 3
 		},
 		--abilities
 		{
-			title = "Your abilities are %data% the most.",
+			title = L("TEXT_TITLE_SCREEN_BASIC_STAT_7"),
 			statKey = 10,
 			amount = 3
 		},
 		{
-			title = "Your enemies have %data% the most.",
+			title = L("TEXT_TITLE_SCREEN_BASIC_STAT_8"),
 			statKey = 11,
 			amount = 3
 		}
@@ -178,7 +178,7 @@ local function TitleScreen(initialSettings, initialTracker, initialProgram)
 
 	local function getRandomStatistic()
 		local statistics = seedLogger.getPastRunStatistics()
-		local completeText = "Fun statistics will be shown here once you play enough."
+		local completeText = L("TEXT_TITLE_SCREEN_FUN_STATISTICS")
 		if hasEnoughData(statistics) then
 			local choices = {}
 			for _, mapping in pairs(basicStatisticMappings) do
@@ -194,7 +194,7 @@ local function TitleScreen(initialSettings, initialTracker, initialProgram)
 				table.insert(choices, description)
 			end
 			local text = MiscUtils.randomTableValue(choices)
-			completeText = "Did you know? " .. text
+			completeText = L("TEXT_TITLE_SCREEN_DID_YOU_KNOW") .. text
 		end
 		local array = DrawingUtils.textToWrappedArray(completeText, ui.frames.mainInnerFrame.getSize().width - 10)
 		for i = 1, 3, 1 do
@@ -284,7 +284,7 @@ local function TitleScreen(initialSettings, initialTracker, initialProgram)
 	end
 
 	local function readAttemptsIntoUI()
-		local attemptsText = "Attempts: " .. attempts
+		local attemptsText = L("TEXT_TITLE_SCREEN_ATTEMPTS") .. attempts
 		ui.controls.attemptsLabel.setText(attemptsText)
 		program.drawCurrentScreens()
 	end
@@ -302,8 +302,10 @@ local function TitleScreen(initialSettings, initialTracker, initialProgram)
 		seedLogger = newSeedLogger
 		initFavorites()
 		attempts = QuickLoader.getAttempts()
-		local name = program.getGameInfo().NAME:gsub("Pokemon", "Pok" .. Chars.accentedE .. "mon")
-		ui.controls.gameLabel.setText(name)
+		local rawName = program.getGameInfo().NAME
+		local gameKey = "GAME_NAME_" .. rawName:upper():gsub("%s+", "_") 
+		local localizedName = L(gameKey) or rawName
+		ui.controls.gameLabel.setText(localizedName)
 		getRandomStatistic()
 		readAttemptsIntoUI()
 		favoriteEditEventListeners.close.setOnClickFunction(toggleFavoriteEditing)
@@ -343,7 +345,7 @@ local function TitleScreen(initialSettings, initialTracker, initialProgram)
 			TextLabel(
 			Component(rowFrame, Box({x = 0, y = 0}, {width = constants.FAVORITES_LABEL_WIDTH, height = 0})),
 			TextField(
-				"Favorite " .. index .. ":",
+				L("TITLE_SCREEN_FAVORITES_ID") .. index .. ":",
 				{x = 2, y = 0},
 				TextStyle(
 					Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -366,7 +368,7 @@ local function TitleScreen(initialSettings, initialTracker, initialProgram)
 				)
 			),
 			TextField(
-				"Set",
+				L("TITLE_SCREEN_FAVORITES_SET"),
 				{x = 4, y = 1},
 				TextStyle(
 					Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -390,37 +392,37 @@ local function TitleScreen(initialSettings, initialTracker, initialProgram)
 			Frame(
 			Box(
 				{x = 0, y = 0},
-				{
-					width = 0,
-					height = 0
-				}
-			),
-			Layout(Graphics.ALIGNMENT_TYPE.HORIZONTAL, 0, {x = 52, y = 4}),
-			ui.frames.favoriteEditFrame
-		)
+                {
+                    width = 0,
+                    height = 0
+                }
+            ),
+            Layout(Graphics.ALIGNMENT_TYPE.HORIZONTAL, 0, {x = 52, y = 4}),
+            ui.frames.favoriteEditFrame
+        ) 
 		local closeButton =
 			TextLabel(
-			Component(
-				ui.frames.favoriteEditCloseFrame,
-				Box(
-					{x = 0, y = 0},
-					{width = constants.CLOSE_BUTTON_WIDTH, height = constants.CLOSE_BUTTON_HEIGHT},
-					"Top box background color",
-					"Top box border color"
-				)
-			),
-			TextField(
-				"Close",
-				{x = 8, y = 2},
-				TextStyle(
-					Graphics.FONT.DEFAULT_FONT_SIZE,
-					Graphics.FONT.DEFAULT_FONT_FAMILY,
-					"Top box text color",
-					"Top box background color"
-				)
-			)
-		)
-		favoriteEditEventListeners.close = MouseClickEventListener(closeButton, toggleFavoriteEditing, false)
+            Component(
+                ui.frames.favoriteEditCloseFrame,
+                Box(
+                    {x = 0, y = 0},
+                    {width = constants.CLOSE_BUTTON_WIDTH, height = constants.CLOSE_BUTTON_HEIGHT},
+                    "Top box background color",
+                    "Top box border color"
+                )
+            ),
+            TextField(
+                L("TITLE_SCREEN_FAVORITES_CLOSE"),
+                {x = 8, y = 2},
+                TextStyle(				
+                    Graphics.FONT.DEFAULT_FONT_SIZE,
+                    Graphics.FONT.DEFAULT_FONT_FAMILY,
+                    "Top box text color",
+                    "Top box background color"
+                )
+            )
+        )
+    favoriteEditEventListeners.close = MouseClickEventListener(closeButton, toggleFavoriteEditing, false)
 	end
 
 	local function initFavoriteEditsFrame()
@@ -450,7 +452,7 @@ local function TitleScreen(initialSettings, initialTracker, initialProgram)
 				)
 			),
 			TextField(
-				"Edit Favorites",
+				L("TITLE_SCREEN_EDIT_FAVORITES"),
 				{x = 36, y = 0},
 				TextStyle(11, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
 			)
@@ -507,7 +509,7 @@ local function TitleScreen(initialSettings, initialTracker, initialProgram)
 				)
 			),
 			TextField(
-				"Favorites",
+				L("TITLE_SCREEN_FAVORITES"),
 				{x = 3, y = 0},
 				TextStyle(11, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
 			)
@@ -597,7 +599,7 @@ local function TitleScreen(initialSettings, initialTracker, initialProgram)
 	end
 
 	local function initTopUI()
-		local versionText = "NDS Ironmon Tracker " .. MiscConstants.TRACKER_VERSION
+		local versionText = L("TITLE_SCREEN_TITLE") .. MiscConstants.TRACKER_VERSION
 		ui.frames.topFrame =
 			Frame(
 			Box(
