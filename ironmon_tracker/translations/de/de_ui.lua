@@ -218,22 +218,22 @@ return {
 
 -- LogViewerScreen/Stats
 
-	LOG_VIEWER_BASE_STATS = "Base Stats (",
-	LOG_VIEWER_BASE_STATS_TOTAL = " total)",
-	
-	LOG_VIEWER_BEST_SPECIAL_ATTACKER = "Best Special Attackers",
-	LOG_VIEWER_BEST_PHYSICAL_ATTACKER = "Best Physical Attackers",
-	LOG_VIEWER_BIGGEST_SPECIAL_WALLS = "Biggest Special Walls",
-	LOG_VIEWER_BEST_DEFENSIVE_TANKS = "Best Defensive Tanks",
-	LOG_VIEWER_BULKIEST_OVERALL = "Bulkiest Overall",
-	LOG_VIEWER_MOST_FRAIL = "Most Frail",
-	
-	LOG_VIEWER_DESC_BEST_SPECIAL_ATTACKER = "The highest amount of Special Attack and Speed.",
-	LOG_VIEWER_DESC_BEST_PHYSICAL_ATTACKER = "The highest amount of Attack and Speed.",
-	LOG_VIEWER_DESC_BIGGEST_SPECIAL_WALLS = "The highest amount of HP and Special Defense.",
-	LOG_VIEWER_DESC_BEST_DEFENSIVE_TANKS = "The highest amount of HP and Defense.",
-	LOG_VIEWER_DESC_BULKIEST_OVERALL = "The highest amount of HP, Defense, and Special Defense.",
-	LOG_VIEWER_DESC_MOST_FRAIL = "The worst amount of HP, Defense and Special Defense.",
+	TEXT_LOG_VIEWER_BASE_STATS = "Basiswerte (",
+	TEXT_LOG_VIEWER_BASE_STATS_TOTAL = " gesamt)",
+
+	TEXT_LOG_VIEWER_BEST_SPECIAL_ATTACKER = "Beste Spezial-Angreifer",
+	TEXT_LOG_VIEWER_BEST_PHYSICAL_ATTACKER = "Beste Physische Angreifer",
+	TEXT_LOG_VIEWER_BIGGEST_SPECIAL_WALLS = "Dickste Spezial Mauer",
+	TEXT_LOG_VIEWER_BEST_DEFENSIVE_TANKS = "Beste Defensive Tanks",
+	TEXT_LOG_VIEWER_BULKIEST_OVERALL = "Am Bulkysten Insgesamt",
+	TEXT_LOG_VIEWER_MOST_FRAIL = "Am Schwächsten",
+
+	TEXT_LOG_VIEWER_DESC_BEST_SPECIAL_ATTACKER = "Höchster Spezial-Angriffs- und Initativwert.",
+	TEXT_LOG_VIEWER_DESC_BEST_PHYSICAL_ATTACKER = "Höchster Angriffs- und Initativwert.",
+	TEXT_LOG_VIEWER_DESC_BIGGEST_SPECIAL_WALLS = "Höchster KP- und Spezial-Verteidigungswert",
+	TEXT_LOG_VIEWER_DESC_BEST_DEFENSIVE_TANKS = "Höchster KP- und Verteidigungswert",
+	TEXT_LOG_VIEWER_DESC_BULKIEST_OVERALL = "Höchster KP-, Verteidigungs- und Spezial-Verteidigungswert.",
+	TEXT_LOG_VIEWER_DESC_MOST_FRAIL = "Niedrigster KP-, Verteidigungs- und Spezial-Verteidigungswert.",
 
 -- LogViewerScreen/PokemonStats
 

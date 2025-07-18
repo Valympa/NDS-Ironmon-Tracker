@@ -51,32 +51,53 @@ local function StatsScreen(initialSettings, initialTracker, initialProgram, init
         DrawingUtils.readPokemonIDIntoImageLabel(currentIconSet, currentID, ui.controls.pokemonImage)
         ui.controls.statBarGraph.setDataSet(logViewerScreen.readStats(logPokemon[currentID]))
         local name = data.name
-        ui.controls.statBarGraph.setHeadingText("Base Stats (" .. data.bst .. " total)")
+        ui.controls.statBarGraph.setHeadingText(L("TEXT_LOG_VIEWER_BASE_STATS") .. data.bst .. L("TEXT_LOG_VIEWER_BASE_STATS_TOTAL"))
         ui.controls.currentPokemonLabel.setText("#" .. currentIDIndex .. ". " .. name)
         program.drawCurrentScreens()
     end
 
+    local statTranslations = {
+        ["Best Special Attackers"] = {
+            label = L("TEXT_LOG_VIEWER_BEST_SPECIAL_ATTACKER"),
+            description = L("TEXT_LOG_VIEWER_DESC_BEST_SPECIAL_ATTACKER"),
+        },
+        ["Best Physical Attackers"] = {
+            label = L("TEXT_LOG_VIEWER_BEST_PHYSICAL_ATTACKER"),
+            description = L("TEXT_LOG_VIEWER_DESC_BEST_PHYSICAL_ATTACKER"),
+        },
+        ["Biggest Special Walls"] = {
+            label = L("TEXT_LOG_VIEWER_BIGGEST_SPECIAL_WALLS"),
+            description = L("TEXT_LOG_VIEWER_DESC_BIGGEST_SPECIAL_WALLS"),
+        },
+        ["Best Defensive Tanks"] = {
+            label = L("TEXT_LOG_VIEWER_BEST_DEFENSIVE_TANKS"),
+            description = L("TEXT_LOG_VIEWER_DESC_BEST_DEFENSIVE_TANKS"),
+        },
+        ["Bulkiest Overall"] = {
+            label = L("TEXT_LOG_VIEWER_BULKIEST_OVERALL"),
+            description = L("TEXT_LOG_VIEWER_DESC_BULKIEST_OVERALL"),
+        },
+        ["Most Frail"] = {
+            label = L("TEXT_LOG_VIEWER_MOST_FRAIL"),
+            description = L("TEXT_LOG_VIEWER_DESC_MOST_FRAIL"),
+        },
+    }
+
     local function readCurrentStatisticIntoUI()
-        local name = currentStatistic[1]
-        local nameLength = DrawingUtils.calculateWordPixelLength(name)
-        --very jank calculation because the bigger font adds more space between letters
-        local offsetX = (constants.TOP_LABEL_WIDTH - nameLength - #name - 2) / 2
+        local key = currentStatistic[1] 
+        local localized = statTranslations[key] or {label = key, description = ""}
+        local labelText = localized.label
+        local labelLength = DrawingUtils.calculateWordPixelLength(labelText)
+        local offsetX = (constants.TOP_LABEL_WIDTH - labelLength - #labelText - 2) / 2
         ui.controls.topLabel.setTextOffset({x = offsetX, y = 0})
-        ui.controls.topLabel.setText(name)
-        local nameToDescription = {
-            ["Best Special Attackers"] = "The highest amount of Special Attack and Speed.",
-            ["Best Physical Attackers"] = "The highest amount of Attack and Speed.",
-            ["Biggest Special Walls"] = "The highest amount of HP and Special Defense.",
-            ["Best Defensive Tanks"] = "The highest amount of HP and Defense.",
-            ["Bulkiest Overall"] = "The highest amount of HP, Defense, and Special Defense.",
-            ["Most Frail"] = "The worst amount of HP, Defense and Special Defense."
-        }
-        local description = nameToDescription[name]
-        local totalWidth = ui.frames.mainFrame.getSize().width - 10
-        local base = -30
-        local centerX = base + ((totalWidth - DrawingUtils.calculateWordPixelLength(description)) / 2)
-        ui.controls.description.setText(description)
-        ui.controls.description.setTextOffset({x = centerX, y = 0})
+        ui.controls.topLabel.setText(labelText)
+
+        local descriptionText = localized.description
+    local totalWidth = ui.frames.mainFrame.getSize().width - 10
+    local base = -30
+    local centerX = base + ((totalWidth - DrawingUtils.calculateWordPixelLength(descriptionText)) / 2)
+    ui.controls.description.setText(descriptionText)
+    ui.controls.description.setTextOffset({x = centerX, y = 0})
     end
 
     local function setUpCurrentStatisticIndex()
