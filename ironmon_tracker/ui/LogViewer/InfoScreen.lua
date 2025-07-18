@@ -32,6 +32,7 @@ local function InfoScreen(initialSettings, initialTracker, initialProgram, initi
     local eventListeners = {}
     local self = {}
     local rows = {}
+    local infoData
 
     local function create2ElementRow(index)
         local rowFrame =
@@ -123,26 +124,15 @@ local function InfoScreen(initialSettings, initialTracker, initialProgram, initi
         end
     end
 
-    local function readInfoIntoRows()
-        --rows are left label, right label
-        local infoRows = {
-            {"Game Name:", program.getGameInfo().NAME:gsub("Pokemon","Pok"..Chars.accentedE.."mon")},
-            {"Randomizer Version:", miscInfo.version},
-            {"Random Seed:", miscInfo.seed}
-        }
-        for index, row in pairs(infoRows) do
+    local function readInfoIntoRows()  
+        for index, entry in ipairs(infoData) do
+            local row = { entry.label .. ":", entry.value }
             readRow(index, row)
         end
         readSettingsIntoUI()
     end
 
-    function self.initialize(newLogInfo)
-        logInfo = newLogInfo
-        miscInfo = logInfo.getMiscInfo()
-        readInfoIntoRows()
-    end
-
-    local function initSettingsStringUI()
+     local function initSettingsStringUI()
         ui.controls.settingsLabel =
             TextLabel(
             Component(
@@ -226,12 +216,13 @@ local function InfoScreen(initialSettings, initialTracker, initialProgram, initi
         )
         local centerPosition = FormsUtils.getCenter(formWidth, formHeight)
         forms.setlocation(copyForm, centerPosition.xPos, centerPosition.yPos)
-        local textBoxLines = {
-            "Game Name: "..program.getGameInfo().NAME:gsub("Pokemon","Pok"..Chars.accentedE.."mon").." ",
-            "Randomizer Version: "..miscInfo.version.." ",
-            "Random Seed: " ..miscInfo.seed.. " ",
-            "Settings String: "..miscInfo.settingsString.. " "
-        }
+        local textBoxLines = {}
+        for _, entry in ipairs(infoData) do
+            table.insert(textBoxLines, entry.label .. ": " .. tostring(entry.value) .. " ")
+        end
+
+        table.insert(textBoxLines, (L and L("TEXT_LOG_VIEWER_INFO_SETTINGS_STRING") or "Settings String") .. ": " .. miscInfo.settingsString)
+
         local completeLines = table.concat(textBoxLines,"\r\n")
         forms.textbox(copyForm, completeLines, formWidth-36, formHeight-100, nil, 10, 10, true, false)
         forms.button(
@@ -247,7 +238,7 @@ local function InfoScreen(initialSettings, initialTracker, initialProgram, initi
         )
     end
 
-    local function initCopyButton()
+        local function initCopyButton()
         ui.frames.copyButtonFrame =
             Frame(
             Box(
@@ -278,7 +269,7 @@ local function InfoScreen(initialSettings, initialTracker, initialProgram, initi
                 )
             ),
             TextField(
-                "Copy info",
+                L("BUTTON_LOG_VIEWER_INFO_COPY_INFO"),
                 {x = 4, y = 2},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -313,11 +304,54 @@ local function InfoScreen(initialSettings, initialTracker, initialProgram, initi
             Layout(Graphics.ALIGNMENT_TYPE.VERTICAL, 0, {x = 3, y = 3}),
             nil
         )
-        for i = 1, 3, 1 do
+        for i = 1, #infoData do
             create2ElementRow(i)
         end
         initSettingsStringUI()
         initCopyButton()
+    end
+
+    function self.initialize(newLogInfo)
+        logInfo = newLogInfo
+        miscInfo = logInfo.getMiscInfo()
+        
+        infoData = {
+            {
+                key = "gameName",
+                label = L and L("TEXT_LOG_VIEWER_INFO_GAME_NAME") or "Game Name",
+                value = (function()
+                    local rawName = program.getGameInfo().NAME or ""
+                    local upperName = rawName:upper():gsub("[^A-Z0-9 ]", "") -- Normalize: uppercase and remove special chars
+                    local nameToKeyMap = {
+                        ["POKEMON DIAMOND"] = "GAME_NAME_POKEMON_DIAMOND",
+                        ["POKEMON PEARL"] = "GAME_NAME_POKEMON_PEARL",
+                        ["POKEMON PLATINUM"] = "GAME_NAME_POKEMON_PLATINUM",
+                        ["POKEMON HEARTGOLD"] = "GAME_NAME_POKEMON_HEARTGOLD",
+                        ["POKEMON SOULSILVER"] = "GAME_NAME_POKEMON_SOULSILVER",
+                        ["POKEMON BLACK"] = "GAME_NAME_POKEMON_BLACK",
+                        ["POKEMON WHITE"] = "GAME_NAME_POKEMON_WHITE",
+                        ["POKEMON BLACK 2"] = "GAME_NAME_POKEMON_BLACK_2",
+                        ["POKEMON WHITE 2"] = "GAME_NAME_POKEMON_WHITE_2",
+                    }
+
+                    local key = nameToKeyMap[upperName]
+                    return key and (L and L(key)) or rawName:gsub("Pokemon", "Pok" .. Chars.accentedE .. "mon")
+                    end)(),
+            },
+            {
+                key = "randomizerVersion",
+                label = L and L("TEXT_LOG_VIEWER_INFO_RANDOMIZER_VERSION") or "Randomizer Version",
+                value = miscInfo.version,
+            },
+            {
+                key = "randomSeed",
+                label = L and L("TEXT_LOG_VIEWER_INFO_RANDOM_SEED") or "Random Seed",
+                value = miscInfo.seed,
+            },
+        }
+        
+        initUI() 
+        readInfoIntoRows()
     end
 
     function self.runEventListeners()
@@ -330,7 +364,6 @@ local function InfoScreen(initialSettings, initialTracker, initialProgram, initi
         ui.frames.mainFrame.show()
     end
 
-    initUI()
     return self
 end
 
