@@ -187,7 +187,7 @@ local function PokemonStatScreen(initialSettings, initialTracker, initialProgram
             end
             label.setText(moveString)
         end
-        ui.controls.movesLabel.setText("Gym TMs")
+        ui.controls.movesLabel.setText(L("TITLE_LOG_VIEWER_POKE_STATS_GYM_TM"))
         ui.controls.movesLabel.setTextOffset({x = 9, y = -1})
         program.drawCurrentScreens()
     end
@@ -251,7 +251,7 @@ local function PokemonStatScreen(initialSettings, initialTracker, initialProgram
         ui.controls.evoLeftButton.setVisibility(totalEvos > 1)
         ui.controls.evoImage.setVisibility(totalEvos ~= 0)
         if totalEvos == 0 then
-            ui.controls.evoInfoLabel.setText("None")
+            ui.controls.evoInfoLabel.setText(L("TEXT_LOG_VIEWER_POKE_STATS_NO_EVO"))
         end
     end
 
@@ -274,7 +274,7 @@ local function PokemonStatScreen(initialSettings, initialTracker, initialProgram
         local pokemonImageParams = pokemonImageListener.getOnHoverParams()
         pokemonImageParams.pokemon = pokemon
         pokemonImageListener.setOnHoverParams(pokemonImageParams)
-        local heading = "Base Stats (" .. pokemon.bst .. " total)"
+        local heading = L("TEXT_LOG_VIEWER_POKE_STATS") .. pokemon.bst .. L("TEXT_LOG_VIEWER_POKE_STATS_TOTAL")
         ui.controls.statBarGraph.setDataSet(dataSet)
         ui.controls.statBarGraph.setHeadingText(heading)
         currentEvoList = pokemon.evolutions
@@ -384,7 +384,7 @@ local function PokemonStatScreen(initialSettings, initialTracker, initialProgram
                 )
             ),
             TextField(
-                "Abilities",
+                L("TITLE_LOG_VIEWER_POKE_STATS_ABILITIES"),
                 {x = 25, y = -1},
                 TextStyle(11, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
@@ -499,7 +499,7 @@ local function PokemonStatScreen(initialSettings, initialTracker, initialProgram
                 )
             ),
             TextField(
-                "Moves",
+                L("TITLE_LOG_VIEWER_POKE_STATS_MOVES"),
                 {x = 11, y = -1},
                 TextStyle(11, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
@@ -726,7 +726,7 @@ local function PokemonStatScreen(initialSettings, initialTracker, initialProgram
                 )
             ),
             TextField(
-                "Evos:",
+                L("TEXT_LOG_VIEWER_POKE_STATS_EVOS"),
                 {x = 3, y = 10},
                 TextStyle(9, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
