@@ -46,8 +46,8 @@ local function SearchScreen(initialSettings, initialTracker, initialProgram, ini
     }
 
     local searchOptions = {
-        ["Look for:"] = constants.LOOK_FOR.POKEMON,
-        ["With:"] = constants.WITH.MOVE
+        [L("TEXT_LOG_VIEWER_SEARCH_LOOK_FOR")] = constants.LOOK_FOR.POKEMON,
+        [L("TEXT_LOG_VIEWER_SEARCH_WITH")] = constants.WITH.MOVE
     }
 
     local ui = {}
@@ -124,13 +124,13 @@ local function SearchScreen(initialSettings, initialTracker, initialProgram, ini
 
     function self.reset()
         clearMatches()
-        searchOptions["Look for:"] = constants.LOOK_FOR.POKEMON
-        searchOptions["With:"] = constants.WITH.MOVE
+        searchOptions[L("TEXT_LOG_VIEWER_SEARCH_LOOK_FOR")] = constants.LOOK_FOR.POKEMON
+        searchOptions[L("TEXT_LOG_VIEWER_SEARCH_WITH")] = constants.WITH.MOVE
         currentDataGroup = MoveData.MOVES
         ui.searchKeyboard.updateDataGroup(currentDataGroup)
         ui.searchKeyboard.updateItemSet(MiscUtils.getSortedKeysByName(currentDataGroup))
         ui.searchKeyboard.clearKeyboard()
-        ui.controls.totalFound.setText("None found")
+        ui.controls.totalFound.setText(L("TEXT_LOG_VIEWER_SEARCH_NONE_FOUND"))
         ui.controls.totalFound.setTextOffset({x = 20, y = 1})
         resultsScroller.setItems({})
         clearResults()
@@ -144,7 +144,7 @@ local function SearchScreen(initialSettings, initialTracker, initialProgram, ini
             local frameInfo = resultFrames[index]
             local rowInfo = rowInfos[index]
             if rowInfo ~= nil then
-                if searchOptions["Look for:"] == constants.LOOK_FOR.POKEMON then
+                if searchOptions[L("TEXT_LOG_VIEWER_SEARCH_LOOK_FOR")] == constants.LOOK_FOR.POKEMON then
                     readPokemonIntoRow(rowInfo, frameInfo)
                 else
                     readTrainerIntoRow(frameInfo, rowInfo)
@@ -242,13 +242,13 @@ local function SearchScreen(initialSettings, initialTracker, initialProgram, ini
     end
 
     local function getTrainerResults(matchedID)
-        local checkingMove = searchOptions["With:"] == constants.WITH.MOVE
+        local checkingMove = searchOptions[L("TEXT_LOG_VIEWER_SEARCH_WITH")] == constants.WITH.MOVE
         return findTrainersWithMatch(matchedID, checkingMove)
     end
 
     local function getPokemonResults(matchedID)
         local matchingResults = {}
-        if searchOptions["With:"] == constants.WITH.MOVE then
+        if searchOptions[L("TEXT_LOG_VIEWER_SEARCH_WITH")] == constants.WITH.MOVE then
             matchingResults = findPokemonWithMove(matchedID)
         else
             matchingResults = findPokemonWithAbility(matchedID)
@@ -258,15 +258,15 @@ local function SearchScreen(initialSettings, initialTracker, initialProgram, ini
 
     local function updateSearch()
         local matchingResults = {}
-        if searchOptions["Look for:"] == constants.LOOK_FOR.POKEMON then
+        if searchOptions[L("TEXT_LOG_VIEWER_SEARCH_LOOK_FOR")] == constants.LOOK_FOR.POKEMON then
             matchingResults = getPokemonResults(currentMatchID)
         else
             matchingResults = getTrainerResults(currentMatchID)
         end
         resultsScroller.setItems(matchingResults)
-        local newText = "Total: " .. #matchingResults
+        local newText = L("TEXT_LOG_VIEWER_SEARCH_TOTAL") .. #matchingResults
         if #matchingResults == 0 then
-            newText = "None found"
+            newText = L("TEXT_LOG_VIEWER_SEARCH_NONE_FOUND")
         end
         local newLength = DrawingUtils.calculateWordPixelLength(newText) + #newText + 2
         local centerX = (constants.RESULT_FRAME_WIDTH - newLength) / 2
@@ -280,7 +280,7 @@ local function SearchScreen(initialSettings, initialTracker, initialProgram, ini
             [constants.WITH.MOVE] = MoveData.MOVES,
             [constants.WITH.ABILITY] = AbilityData.ABILITIES
         }
-        currentDataGroup = dataGroups[searchOptions["With:"]]
+        currentDataGroup = dataGroups[searchOptions[L("TEXT_LOG_VIEWER_SEARCH_WITH")]]
         ui.searchKeyboard.updateItemSet(MiscUtils.getSortedKeysByName(currentDataGroup))
         ui.searchKeyboard.updateDataGroup(currentDataGroup)
         ui.searchKeyboard.updateSearch()
@@ -448,7 +448,7 @@ local function SearchScreen(initialSettings, initialTracker, initialProgram, ini
             )
             local params = {
                 radioButton = searchOptionLabel,
-                isLookForButton = radioGroupKey == "Look for:"
+                isLookForButton = radioGroupKey == L("TEXT_LOG_VIEWER_SEARCH_LOOK_FOR")
             }
             table.insert(eventListeners, MouseClickEventListener(searchOptionLabel, onSearchTypeRadioClick, params))
         end
@@ -687,10 +687,10 @@ local function SearchScreen(initialSettings, initialTracker, initialProgram, ini
             ui.frames.searchFrame
         )
         local optionSets = {
-            ["Look for:"] = {constants.LOOK_FOR.POKEMON, constants.LOOK_FOR.TRAINERS},
-            ["With:"] = {constants.WITH.MOVE, constants.WITH.ABILITY}
+            [L("TEXT_LOG_VIEWER_SEARCH_LOOK_FOR")] = {constants.LOOK_FOR.POKEMON, constants.LOOK_FOR.TRAINERS},
+            [L("TEXT_LOG_VIEWER_SEARCH_WITH")] = {constants.WITH.MOVE, constants.WITH.ABILITY}
         }
-        local order = {"Look for:", "With:"}
+        local order = {L("TEXT_LOG_VIEWER_SEARCH_LOOK_FOR"), L("TEXT_LOG_VIEWER_SEARCH_WITH")}
         for _, optionType in pairs(order) do
             local optionSet = optionSets[optionType]
             createSearchOptionRow(ui.frames.searchOptionsFrame, optionType, optionSet, optionType)

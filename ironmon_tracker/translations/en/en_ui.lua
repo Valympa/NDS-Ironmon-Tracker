@@ -262,10 +262,10 @@ return {
 
 -- LogViewerScreen/Search
 
-	LOG_VIEWER_SEARCH_LOOK_FOR = "Look for:",
-	LOG_VIEWER_SEARCH_WITH = "With:",
-	LOG_VIEWER_SEARCH_NONE_FOUND = "None found",
-	LOG_VIEWER_SEARCH_TOTAL = "Total: ",
+	TEXT_LOG_VIEWER_SEARCH_LOOK_FOR = "Look for:",
+	TEXT_LOG_VIEWER_SEARCH_WITH = "With:",
+	TEXT_LOG_VIEWER_SEARCH_NONE_FOUND = "None found",
+	TEXT_LOG_VIEWER_SEARCH_TOTAL = "Total: ",
 	
 -- TrackedInfoScreen/RestorePoints
 
