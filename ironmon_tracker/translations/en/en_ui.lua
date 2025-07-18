@@ -249,7 +249,7 @@ return {
 	
 -- LogViewerScreen/Pivots
 
-	LOG_VIEWER_PIVOT_AREA = "Areas",
+	TITLE_LOG_VIEWER_PIVOT_AREA = "Areas",
 
 -- LogViewerScreen/Info
 

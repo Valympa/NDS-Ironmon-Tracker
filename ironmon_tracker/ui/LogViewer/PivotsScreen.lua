@@ -235,7 +235,7 @@ local function PivotsScreen(initialSettings, initialTracker, initialProgram, ini
                 )
             ),
             TextField(
-                "Areas",
+                L("TITLE_LOG_VIEWER_PIVOT_AREA"),
                 {x = 24, y = 0},
                 TextStyle(11, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
