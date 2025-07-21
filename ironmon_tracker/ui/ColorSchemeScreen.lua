@@ -28,6 +28,11 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
     local eventListeners = {}
     local self = {}
 
+    local function getTextWidthWithPadding(text, minWidth)
+    local width = Graphics.getTextWidth and Graphics.getTextWidth(text, Graphics.FONT.DEFAULT_FONT_SIZE)
+                 or (#text * Graphics.FONT.DEFAULT_FONT_SIZE * 0.5)
+    return math.max(minWidth or 40, width + 10)
+    end
 
     local function onToggleClick(button)
         button.onClick()
@@ -204,13 +209,17 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
             Layout(Graphics.ALIGNMENT_TYPE.VERTICAL, 5, {x = 7, y = 7}),
             ui.frames.mainFrame
         )
+
+        local labelText = L("BUTTON_IMPORT_THEME")
+        local buttonWidth = getTextWidthWithPadding(labelText, 65)  
+
         ui.controls.importTheme =
             TextLabel(
             Component(
                 ui.frames.importExportFrame,
                 Box(
                     {x = 0, y = 0},
-                    {width = 65, height = constants.MAIN_BUTTON_HEIGHT},
+                    {width = buttonWidth, height = constants.MAIN_BUTTON_HEIGHT},
                     "Top box background color",
                     "Top box border color",
                     true,
@@ -218,7 +227,7 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
                 )
             ),
             TextField(
-                L("BUTTON_IMPORT_THEME"),
+                labelText,
                 {x = 5, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -228,13 +237,17 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
                 )
             )
         )
+
+        local labelText = L("BUTTON_EXPORT_THEME")
+        local buttonWidth = getTextWidthWithPadding(labelText, 65)  
+
         ui.controls.exportTheme =
             TextLabel(
             Component(
                 ui.frames.importExportFrame,
                 Box(
                     {x = 0, y = 0},
-                    {width = 65, height = constants.MAIN_BUTTON_HEIGHT},
+                    {width = buttonWidth, height = constants.MAIN_BUTTON_HEIGHT},
                     "Top box background color",
                     "Top box border color",
                     true,
@@ -242,7 +255,7 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
                 )
             ),
             TextField(
-                L("BUTTON_EXPORT_THEME"),
+                labelText,
                 {x = 5, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -277,13 +290,17 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
             Layout(Graphics.ALIGNMENT_TYPE.HORIZONTAL, 7, {x = 7, y = 7}),
             ui.frames.mainFrame
         )
+
+        local labelText = L("BUTTON_RESTORE_DEFAULTS")
+        local buttonWidth = getTextWidthWithPadding(labelText, 65)  
+
         ui.controls.restoreDefaults =
             TextLabel(
             Component(
                 ui.frames.bottomFrame,
                 Box(
                     {x = 0, y = 0},
-                    {width = 76, height = constants.MAIN_BUTTON_HEIGHT},
+                    {width = buttonWidth, height = constants.MAIN_BUTTON_HEIGHT},
                     "Top box background color",
                     "Top box border color",
                     true,
@@ -291,7 +308,7 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
                 )
             ),
             TextField(
-                L("BUTTON_RESTORE_DEFAULTS"),
+                labelText,
                 {x = 5, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -335,8 +352,8 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
         ui.frames.mainFrame =
             Frame(
             Box(
-                {x = Graphics.SIZES.SCREEN_WIDTH + Graphics.SIZES.MAIN_SCREEN_WIDTH + 48, y = 0},
-                {width = Graphics.SIZES.MAIN_SCREEN_WIDTH, height = constants.MAIN_FRAME_HEIGHT},
+                {x = Graphics.SIZES.SCREEN_WIDTH + Graphics.SIZES.MAIN_SCREEN_WIDTH + 20, y = 0},
+                {width = Graphics.SIZES.MAIN_SCREEN_WIDTH + 1000, height = constants.MAIN_FRAME_HEIGHT},
                 "Main background color",
                 nil
             ),
@@ -362,13 +379,16 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
             ui.frames.mainFrame
         )
 
+        local labelText = L("BUTTON_SAVE_THEME")
+        local buttonWidth = getTextWidthWithPadding(labelText, 65)  
+
         ui.controls.saveTheme =
             TextLabel(
             Component(
                 ui.frames.saveLoadThemeFrame,
                 Box(
                     {x = 0, y = 0},
-                    {width = 59, height = constants.MAIN_BUTTON_HEIGHT},
+                    {width = buttonWidth, height = constants.MAIN_BUTTON_HEIGHT},
                     "Top box background color",
                     "Top box border color",
                     true,
@@ -376,7 +396,7 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
                 )
             ),
             TextField(
-                L("BUTTON_SAVE_THEME"),
+                labelText,
                 {x = 5, y = 1},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
