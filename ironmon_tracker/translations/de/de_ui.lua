@@ -147,7 +147,7 @@ return {
 
 	TITLE_ICON_SETS_SCREEN_POKEMON_ICON_SETS = "Pok" .. Chars.accentedE .. "mon Icon-Sets",
 	TOGGLE_ENABLE_BROWS = "Augenbrauen aktivieren",
-    TOGGLE_FASTER_ANIMATIONS = "Schnellere Animationen",
+    TOGGLE_FASTER_ANIMATIONS = "Schnellere Animation",
     TOGGLE_CHANGE_DIRECTION = "Richtungswechsel",
     BUTTON_ICON_SETS_SCREEN_GO_BACK = "Zurück",
 
@@ -168,7 +168,7 @@ return {
 	BUTTON_LOAD_THEME = "Motiv laden",
 	BUTTON_IMPORT_THEME = "Motiv importieren",
 	BUTTON_EXPORT_THEME = "Motiv exportieren",
-	BUTTON_RESTORE_DEFAULTS = "Standardeinstellungen",
+	BUTTON_RESTORE_DEFAULTS = "Standard-Einst.",
 	BUTTON_EDIT_COLOR_THEME_GO_BACK = "Zurück",
 	
 -- TrackedInfoScreen
