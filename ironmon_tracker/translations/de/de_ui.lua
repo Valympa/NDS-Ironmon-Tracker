@@ -114,10 +114,10 @@ return {
 	TOGGLE_SHOW_MOVE_EFFECTIVENESS = "Zeige Attacken-Effektivität",
 	TOGGLE_CALCULATE_VARIABLE_DAMAGE = "Variablen Schaden berechnen",
 	TOGGLE_SHOW_ACTUAL_ENEMY_PP = "Tatsächliche AP des Gegners anzeigen",
-	TOGGLE_SHOW_1ST_FIGHT_STATS_PLATINUM = "Platin: Statistiken des 1. Kampfes anzeigen",
+	TOGGLE_SHOW_1ST_FIGHT_STATS_PLATINUM = "Platin: Stats des 1. Kampfes anzeigen",
 	TOGGLE_ENABLE_ENEMY_LOCKING = "Gegnererfassung aktivieren",
 	TOGGLE_DOUBLES_MODE = "Doppel-Modus",
-	BUTTON_BATTLE_SETTINGS_GO_BACK = "Go back",
+	BUTTON_BATTLE_SETTINGS_GO_BACK = "Zurück",
 	
 -- TrackerAppearanceOptionsScreen
 

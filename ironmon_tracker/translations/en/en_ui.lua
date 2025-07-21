@@ -107,7 +107,6 @@ return {
 	
 	LABEL_MAIN_OPTIONS_TRACKER_VERSION = "Tracker version: ",
 	
-
 -- BattleSettingsScreen
 
 	TITLE_BATTLE_SETTINGS = "Battle Settings",

@@ -32,7 +32,7 @@ local function BattleOptionsScreen(initialSettings, initialTracker, initialProgr
         end
         program.drawCurrentScreens()
     end
-    local function initBattleToggleButtons()
+    local function initBattleToggleButtons(totalWidth)
         local orderedKeys = {
             "AUTO_SWAP_TO_ENEMY",
             "SHOW_MOVE_EFFECTIVENESS",
@@ -42,15 +42,15 @@ local function BattleOptionsScreen(initialSettings, initialTracker, initialProgr
             "ENABLE_ENEMY_LOCKING",
             "DOUBLES_MODE"
         }
-        for _, key in pairs(orderedKeys) do
-            local frame =
-                Frame(
-                Box({x = 0, y = 0}, {width = constants.TOGGLE_FRAME_WIDTH, height = constants.TOGGLE_FRAME_HEIGHT}, nil, nil),
+    for _, key in pairs(orderedKeys) do
+        local frame =
+            Frame(
+                Box({x = 0, y = 0}, {width = totalWidth, height = constants.TOGGLE_FRAME_HEIGHT}, nil, nil),
                 Layout(Graphics.ALIGNMENT_TYPE.HORIZONTAL, 2),
                 ui.frames.mainInnerFrame
             )
-            local toggle =
-                SettingToggleButton(
+        local toggle =
+            SettingToggleButton(
                 Component(
                     frame,
                     Box(
@@ -69,28 +69,35 @@ local function BattleOptionsScreen(initialSettings, initialTracker, initialProgr
                 true,
                 program.saveSettings
             )
-            
-            local labelName = L("TOGGLE_" .. key) or key
-            
-            TextLabel(
-                Component(frame, Box({x = 0, y = 0}, {width = 0, height = 0}, nil, nil, false)),
-                TextField(
-                    labelName,
-                    {x = 0, y = 0},
-                    TextStyle(
-                        Graphics.FONT.DEFAULT_FONT_SIZE,
-                        Graphics.FONT.DEFAULT_FONT_FAMILY,
-                        "Top box text color",
-                        "Top box background color"
-                    )
+        local labelWidth = totalWidth - constants.BUTTON_SIZE - 10  
+
+        local labelName = L("TOGGLE_" .. key) or key
+
+        TextLabel(
+            Component(frame, Box({x = 0, y = 0}, {width = labelWidth, height = constants.TOGGLE_FRAME_HEIGHT}, nil, nil, false)),
+            TextField(
+                labelName,
+                {x = 0, y = (constants.TOGGLE_FRAME_HEIGHT - Graphics.FONT.DEFAULT_FONT_SIZE) / 2}, 
+                TextStyle(
+                    Graphics.FONT.DEFAULT_FONT_SIZE,
+                    Graphics.FONT.DEFAULT_FONT_FAMILY,
+                    "Top box text color",
+                    "Top box background color"
                 )
             )
-            table.insert(eventListeners, MouseClickEventListener(toggle, onToggleClick, toggle))
+        )
+        table.insert(eventListeners, MouseClickEventListener(toggle, onToggleClick, toggle))
         end
     end
     local function initUI()
         ui.controls = {}
         ui.frames = {}
+
+        local titleText = L("TITLE_BATTLE_SETTINGS")
+        local fontSize = 13
+        local textWidth = Graphics.getTextWidth and Graphics.getTextWidth(titleText, fontSize) or (#titleText * fontSize * 0.5)
+        local boxWidth = textWidth + 40  
+
         ui.frames.mainFrame =
             Frame(
             Box(
@@ -107,7 +114,7 @@ local function BattleOptionsScreen(initialSettings, initialTracker, initialProgr
             Box(
                 {x = Graphics.SIZES.BORDER_MARGIN, y = Graphics.SIZES.BORDER_MARGIN},
                 {
-                    width = Graphics.SIZES.MAIN_SCREEN_WIDTH - 2 * Graphics.SIZES.BORDER_MARGIN,
+                    width = boxWidth,
                     height = constants.BATTLE_OPTIONS_HEIGHT - 2 * Graphics.SIZES.BORDER_MARGIN
                 },
                 "Top box background color",
@@ -118,29 +125,45 @@ local function BattleOptionsScreen(initialSettings, initialTracker, initialProgr
         )
         ui.controls.topHeading =
             TextLabel(
-            Component(
-                ui.frames.mainFrame,
-                Box(
-                    {x = 5, y = 5},
-                    {width = Graphics.SIZES.MAIN_SCREEN_WIDTH - 2 * Graphics.SIZES.BORDER_MARGIN, height = 18},
-                    "Top box background color",
-                    "Top box border color",
-                    false
+                Component(
+                    ui.frames.mainFrame,
+                    Box(
+                        {x = 5, y = 5},
+                        {width = boxWidth, height = 18},
+                        "Top box background color",
+                        "Top box border color",
+                        false
+                    )       
+                ),
+                TextField(
+                    titleText,
+                    {x = 28, y = 1},
+                    TextStyle(fontSize, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
                 )
-            ),
-            TextField(
-                L("TITLE_BATTLE_SETTINGS"),
-                {x = 28, y = 1},
-                TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
-            )
         )
+        local text = L("BUTTON_BATTLE_SETTINGS_GO_BACK")
+        local fontSize = Graphics.FONT.DEFAULT_FONT_SIZE
+
+        local textWidth = Graphics.getTextWidth and Graphics.getTextWidth(text, fontSize)
+                  or (#text * fontSize * 0.5)
+
+        local horizontalPadding = 5
+        local buttonWidth = math.floor(textWidth + 2 * horizontalPadding)
+        local buttonHeight = 14
+        local rightPadding = 9
+
+        local textX = math.floor((buttonWidth - textWidth) / 2)
+
         ui.controls.goBackButton =
             TextLabel(
             Component(
                 ui.frames.mainFrame,
                 Box(
-                    {x = Graphics.SIZES.MAIN_SCREEN_WIDTH - 49, y = constants.BATTLE_OPTIONS_HEIGHT - 23},
-                    {width = 40, height = 14},
+                    {
+                        x = Graphics.SIZES.BORDER_MARGIN + boxWidth - buttonWidth - rightPadding,
+                        y = constants.BATTLE_OPTIONS_HEIGHT - 23
+                    },
+                    {width = buttonWidth, height = buttonHeight},
                     "Top box background color",
                     "Top box border color",
                     true,
@@ -148,10 +171,10 @@ local function BattleOptionsScreen(initialSettings, initialTracker, initialProgr
                 )
             ),
             TextField(
-                L("BUTTON_BATTLE_SETTINGS_GO_BACK"),
-                {x = 3, y = 1},
+                text,
+                {x = textX, y = 1},
                 TextStyle(
-                    Graphics.FONT.DEFAULT_FONT_SIZE,
+                    fontSize,
                     Graphics.FONT.DEFAULT_FONT_FAMILY,
                     "Top box text color",
                     "Top box background color"
@@ -159,7 +182,7 @@ local function BattleOptionsScreen(initialSettings, initialTracker, initialProgr
             )
         )
         table.insert(eventListeners, MouseClickEventListener(ui.controls.goBackButton, onGoBackClick))
-        initBattleToggleButtons()
+        initBattleToggleButtons(boxWidth)
     end
     function self.runEventListeners()
         for _, eventListener in pairs(eventListeners) do
