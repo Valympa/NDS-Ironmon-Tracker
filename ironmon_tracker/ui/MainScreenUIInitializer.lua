@@ -925,7 +925,7 @@ local function MainScreenUIInitializer(ui, gameInfo)
             Box(
                 {x = 0, y = 0},
                 {
-                    width = 44,
+                    width = 59,
                     height = 11
                 },
                 "Top box background color",
