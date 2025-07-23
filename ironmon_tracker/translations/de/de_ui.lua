@@ -63,7 +63,7 @@ return {
 	TEXT_MAIN_SCREEN_UNKNOWN = "?",
 	TEXT_MAIN_SCREEN_POKEMON_DISLIKE = " Dein Pok" .. Chars.accentedE .. "mon wird das nicht mögen.",
 	TEXT_MAIN_SCREEN_YUM = " Yum!",
-	TEXT_MAIN_SCREEN_NO_DATA_FOUND = "Keine Daten gefunden.",
+	TEXT_MAIN_SCREEN_NO_DATA_FOUND = "Keine Daten...",
 	TEXT_MAIN_SCREEN_YOU_WON = "GEWONNEN!",
 	
 	
@@ -198,7 +198,7 @@ return {
 	BUTTON_PAST_RUNS_NEWEST = "Neuste",
 	BUTTON_PAST_RUNS_OLDEST = "Älteste",
 	BUTTON_PAST_RUNS_A_Z = "A - Z",
-	TITLE_PAST_RUNS_MINIMUM_BADGES = "Minimale Ordenanzahl",
+	TITLE_PAST_RUNS_MINIMUM_BADGES = "Minimum Orden",
 	BUTTON_PAST_RUNS_DELETE_0_BADGES_RUNS = "Lösche 0 Orden Runs",
 	BUTTON_PAST_RUNS_GO_BACK = "Zurück",
 
@@ -268,14 +268,14 @@ return {
 	
 -- TrackedInfoScreen/RestorePoints
 
-	TITLE_RESTORE_POINTS = "Wiederherstellungspunkte",
-	TEXT_SAVESTATES_DESCRIPTION_LINE_1 = "Savestates werden erstellt, während du",
-    TEXT_SAVESTATES_DESCRIPTION_LINE_2 = "spielst, für den Fall, dass Softlocks oder andere",
-    TEXT_SAVESTATES_DESCRIPTION_LINE_3 = "größere Probleme auftreten. Du kannst diese laden,",
-    TEXT_SAVESTATES_DESCRIPTION_LINE_4 = "um zu einem früheren Zustand zurückzukehren",
-	BUTTON_BACK_TO_PRESENT = "Zurück zum aktuellen Punkt",
-    TEXT_NO_RESTORE_POINTS = "Keine Wiederherstellungspunkte verfügbar.",
-    BUTTON_LOAD_RESTORE_POINT = "Wiederherstellungspunkt laden",
+	TITLE_RESTORE_POINTS = "Sicherungspunkte",
+	TEXT_SAVESTATES_DESCRIPTION_LINE_1 = "Speicherstände werden im",
+    TEXT_SAVESTATES_DESCRIPTION_LINE_2 = "Spielverlauf erstellt, falls ein",
+    TEXT_SAVESTATES_DESCRIPTION_LINE_3 = "Softlock oder Fehler auftritt.",
+    TEXT_SAVESTATES_DESCRIPTION_LINE_4 = "Hier kannst du diese laden.",
+	BUTTON_BACK_TO_PRESENT = "Zurück zum Jetzt",
+    TEXT_NO_RESTORE_POINTS = "Keine Speicherpunkte verfügbar.",
+    BUTTON_LOAD_RESTORE_POINT = "Sicherungspunkt laden",
     TEXT_RESTOREPOINT_JUST_NOW = "Gerade eben",
 	TEXT_RESTOREPOINT_MINUTES_AGO_SINGULAR = "Vor {minutes} Minute",
 	TEXT_RESTOREPOINT_MINUTES_AGO_PLURAL = "Vor {minutes} Minuten",

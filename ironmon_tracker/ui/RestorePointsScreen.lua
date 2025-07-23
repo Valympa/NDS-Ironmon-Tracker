@@ -144,7 +144,7 @@ local function RestorePointsScreen(initialSettings, initialTracker, initialProgr
                     )
                 )
             )
-        end
+    end
         ui.frames.backToCurrentFrame =
             Frame(
             Box(
@@ -412,22 +412,30 @@ local function RestorePointsScreen(initialSettings, initialTracker, initialProgr
             Layout(Graphics.ALIGNMENT_TYPE.VERTICAL),
             ui.frames.mainFrame
         )
+
+        local titleText = L("TITLE_RESTORE_POINTS")
+        local boxWidth = Graphics.SIZES.MAIN_SCREEN_WIDTH - 2 * Graphics.SIZES.BORDER_MARGIN
+        local fontSize = 13
+        local textWidth = Graphics.getTextWidth and Graphics.getTextWidth(titleText, fontSize)
+                or (#titleText * fontSize * 0.5)
+        local posX = math.floor((boxWidth - textWidth) / 2 + 0.5)
+
         ui.controls.topHeading =
             TextLabel(
             Component(
                 ui.frames.mainInnerFrame,
                 Box(
                     {x = 5, y = 5},
-                    {width = Graphics.SIZES.MAIN_SCREEN_WIDTH - 2 * Graphics.SIZES.BORDER_MARGIN, height = 18},
+                    {width = boxWidth, height = 18},
                     "Top box background color",
                     "Top box border color",
                     false
                 )
             ),
             TextField(
-                L("TITLE_RESTORE_POINTS"),
-                {x = 29, y = 1},
-                TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
+                titleText,
+                {x = posX, y = 1},
+                TextStyle(fontSize, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
         )
         initDescriptionUI()
