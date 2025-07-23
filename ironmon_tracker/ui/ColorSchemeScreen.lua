@@ -31,7 +31,7 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
     local function getTextWidthWithPadding(text, minWidth)
     local width = Graphics.getTextWidth and Graphics.getTextWidth(text, Graphics.FONT.DEFAULT_FONT_SIZE)
                  or (#text * Graphics.FONT.DEFAULT_FONT_SIZE * 0.5)
-    return math.max(minWidth or 40, width + 4)
+    return math.max(minWidth or 40, width + 10)
     end
 
     local function onToggleClick(button)
@@ -292,7 +292,7 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
         )
 
         local labelText = L("BUTTON_RESTORE_DEFAULTS")
-        local buttonWidth = getTextWidthWithPadding(labelText)  
+        local buttonWidth = getTextWidthWithPadding(labelText, 65)  
 
         ui.controls.restoreDefaults =
             TextLabel(
@@ -375,7 +375,7 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
                 "Top box background color",
                 "Top box border color"
             ),
-            Layout(Graphics.ALIGNMENT_TYPE.HORIZONTAL, 5, {x = 5, y = 5}),
+            Layout(Graphics.ALIGNMENT_TYPE.HORIZONTAL, 7, {x = 7, y = 7}),
             ui.frames.mainFrame
         )
 

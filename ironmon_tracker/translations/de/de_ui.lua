@@ -164,8 +164,8 @@ return {
 
 -- TrackerAppearanceOptionsScreen/EditColorThemeScreen
 
-	BUTTON_SAVE_THEME = "Motiv speichern",
-	BUTTON_LOAD_THEME = "Motiv laden",
+	BUTTON_SAVE_THEME = "Speichern",
+	BUTTON_LOAD_THEME = "Laden",
 	BUTTON_IMPORT_THEME = "Motiv importieren",
 	BUTTON_EXPORT_THEME = "Motiv exportieren",
 	BUTTON_RESTORE_DEFAULTS = "Standard-Einst.",
