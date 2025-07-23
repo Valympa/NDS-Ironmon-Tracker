@@ -274,21 +274,29 @@ local function TrackedInfoScreen(initialSettings, initialTracker, initialProgram
 			Layout(Graphics.ALIGNMENT_TYPE.VERTICAL),
 			ui.frames.mainFrame
 		)
+
+		local titleText = L("TITLE_TRACKED_INFO")
+		local boxWidth = Graphics.SIZES.MAIN_SCREEN_WIDTH - 2 * Graphics.SIZES.BORDER_MARGIN
+		local fontSize = 13
+		local textWidth = Graphics.getTextWidth and Graphics.getTextWidth(titleText, fontSize)
+                 		or (#titleText * fontSize * 0.5)
+		local posX = math.floor((boxWidth - textWidth) / 2 + 0.5)
+
 		ui.controls.topHeading =
 			TextLabel(
 			Component(
 				ui.frames.mainInnerFrame,
 				Box(
 					{x = 0, y = 0},
-					{width = Graphics.SIZES.MAIN_SCREEN_WIDTH - 2 * Graphics.SIZES.BORDER_MARGIN, height = 18},
+					{width = boxWidth, height = 18},
 					"Top box background color",
 					"Top box border color",
 					false
 				)
 			),
 			TextField(
-				L("TITLE_TRACKED_INFO"),
-				{x = 36, y = 1},
+				titleText,
+				{x = posX, y = 1},
 				TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
 			)
 		)

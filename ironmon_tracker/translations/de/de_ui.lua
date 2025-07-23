@@ -178,12 +178,12 @@ return {
 	BUTTON_PAST_RUNS = "Letzte Runs",
 	BUTTON_STATISTICS = "Statistiken",
 	BUTTON_OPEN_LOG = "Öffne Log",
-	BUTTON_RESTORE_POINTS = "Wiederherstellungspunkte",
+	BUTTON_RESTORE_POINTS = "Sicherungspunkte",
 	BUTTON_LOAD_TRACKER_DATA = "Lade Tracker Daten",
 	TITLE_RUN_OVER_LABEL = "Run gilt als beendet, wenn:",
-	ROW_FAINT_ON_LEAD = "Lead Pok" .. Chars.accentedE .. "mon ohnmächtig wird",
-	ROW_FAINT_ON_HIGHEST_LEVEL = "Höchstes Level ohnmächtig wird",
-	ROW_FAINT_ON_PARTY = "Das ganze Team ohnmächtig wird",
+	ROW_FAINT_ON_LEAD = "Lead Pok" .. Chars.accentedE .. "mon besiegt ist",
+	ROW_FAINT_ON_HIGHEST_LEVEL = "Höchstes Level besiegt ist",
+	ROW_FAINT_ON_PARTY = "Das ganze Team besiegt ist",
 	BUTTON_TRACKED_INFO_GO_BACK = "Zurück",
 
 -- TrackedInfoScreen/TrackedPokemon
