@@ -3,7 +3,7 @@ Graphics = {}
 Graphics.SIZES = {
     UP_GAP = 0,
     DOWN_GAP = 0,
-    MAIN_SCREEN_WIDTH = 165,
+    MAIN_SCREEN_WIDTH = 150,
     MAIN_SCREEN_HEIGHT = 141,
     DEFAULT_TEXT_OFFSET = {x = 0, y = 0},
     SCREEN_HEIGHT = 192,
@@ -183,7 +183,7 @@ Graphics.MAIN_SCREEN_CONSTANTS = {
         {text = "_", color = "Negative text color"},
         {text = "=", color = "Top box text color"}
     },
-    BADGE_HORIZONTAL_WIDTH = 155,
+    BADGE_HORIZONTAL_WIDTH = 140,
     BADGE_HORIZONTAL_HEIGHT = 19,
     BADGE_VERTICAL_WIDTH = 19,
     BADGE_VERTICAL_HEIGHT = 131,

@@ -353,7 +353,7 @@ local function ColorSchemeScreen(initialSettings, initialTracker, initialProgram
             Frame(
             Box(
                 {x = Graphics.SIZES.SCREEN_WIDTH + Graphics.SIZES.MAIN_SCREEN_WIDTH + 20, y = 0},
-                {width = Graphics.SIZES.MAIN_SCREEN_WIDTH + 1000, height = constants.MAIN_FRAME_HEIGHT},
+                {width = Graphics.SIZES.MAIN_SCREEN_WIDTH, height = constants.MAIN_FRAME_HEIGHT},
                 "Main background color",
                 nil
             ),
