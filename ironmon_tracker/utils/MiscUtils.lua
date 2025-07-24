@@ -433,3 +433,18 @@ function MiscUtils.getPickledTableFromFile(fileName)
         end
     end
 end
+
+function MiscUtils.getCurrentLanguage(settings)
+    if settings and settings.appearance and settings.appearance.LANGUAGE then
+        return settings.appearance.LANGUAGE
+    else
+        return "en" -- Fallback
+    end
+end
+
+function MiscUtils.getPaddingForLanguage(settings, paddingTable, defaultPadding)
+    local lang = MiscUtils.getCurrentLanguage(settings)
+    return paddingTable[lang] or defaultPadding
+end
+
+return MiscUtils
