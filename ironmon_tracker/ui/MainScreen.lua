@@ -5,6 +5,7 @@ local function MainScreen(initialSettings, initialTracker, initialProgram)
     local FrameCounter = dofile(Paths.FOLDERS.DATA_FOLDER .. "/FrameCounter.lua")
     local MainScreenUIInitializer = dofile(Paths.FOLDERS.UI_FOLDER .. "/MainScreenUIInitializer.lua")
     local BrowsManager = dofile(Paths.FOLDERS.EXTRAS_FOLDER .. "/BrowsManager.lua")
+    local MiscUtils = dofile(Paths.FOLDERS.UTILS_FOLDER .. "/MiscUtils.lua")    
     local L = Localization.get
     local settings = initialSettings
     local tracker = initialTracker

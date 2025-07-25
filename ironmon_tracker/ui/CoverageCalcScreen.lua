@@ -11,6 +11,7 @@ local function CoverageCalcScreen(initialSettings, initialTracker, initialProgra
     local ImageLabel = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/ImageLabel.lua")
     local ImageField = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/ImageField.lua")
     local ScrollBar = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/ScrollBar.lua")
+    local MiscUtils = dofile(Paths.FOLDERS.UTILS_FOLDER .. "/MiscUtils.lua")
     local L = Localization.get
     local settings = initialSettings
     local tracker = initialTracker

@@ -9,6 +9,7 @@ local function updatenotesscreen(initialSettings, initialTracker, initialProgram
 	local Layout = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/Layout.lua")
 	local Icon = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/Icon.lua")
 	local MouseClickEventListener = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/MouseClickEventListener.lua")
+	local MiscUtils = dofile(Paths.FOLDERS.UTILS_FOLDER .. "/MiscUtils.lua")
 	local L = Localization.get
 	local settings = initialSettings
 	local tracker = initialTracker

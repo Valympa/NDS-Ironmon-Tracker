@@ -8,6 +8,7 @@ local function TrackerSetupScreen(initialSettings, initialTracker, initialProgra
     local Layout = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/Layout.lua")
     local MouseClickEventListener = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/MouseClickEventListener.lua")
     local JoypadEventListener = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/JoypadEventListener.lua")
+    local MiscUtils = dofile(Paths.FOLDERS.UTILS_FOLDER .. "/MiscUtils.lua")
     local L = Localization.get
     local settings = initialSettings
     local tracker = initialTracker

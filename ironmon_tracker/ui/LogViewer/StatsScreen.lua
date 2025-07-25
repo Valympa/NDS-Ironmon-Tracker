@@ -13,6 +13,7 @@ local function StatsScreen(initialSettings, initialTracker, initialProgram, init
     local BarGraph = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/BarGraph.lua")
     local ScreenStack = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/ScreenStack.lua")
     local logInfo
+    local MiscUtils = dofile(Paths.FOLDERS.UTILS_FOLDER .. "/MiscUtils.lua")    
     local L = Localization.get
     local settings = initialSettings
     local tracker = initialTracker

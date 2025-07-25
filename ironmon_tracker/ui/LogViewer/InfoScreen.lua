@@ -14,6 +14,7 @@ local function InfoScreen(initialSettings, initialTracker, initialProgram, initi
     local HoverEventListener = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/HoverEventListener.lua")
     local logInfo
     local miscInfo
+    local MiscUtils = dofile(Paths.FOLDERS.UTILS_FOLDER .. "/MiscUtils.lua")
     local L = Localization.get
     local settings = initialSettings
     local logViewerScreen = initialLogViewerScreen

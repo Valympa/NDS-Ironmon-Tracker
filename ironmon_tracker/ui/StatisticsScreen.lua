@@ -8,6 +8,7 @@ local function StatisticsScreen(initialSettings, initialTracker, initialProgram)
     local Layout = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/Layout.lua")
     local MouseClickEventListener = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/MouseClickEventListener.lua")
     local BarGraph = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/BarGraph.lua")
+    local MiscUtils = dofile(Paths.FOLDERS.UTILS_FOLDER .. "/MiscUtils.lua")
     local L = Localization.get
     local settings = initialSettings
     local tracker = initialTracker

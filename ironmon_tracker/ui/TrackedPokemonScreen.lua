@@ -8,6 +8,7 @@ local function TrackedPokemonScreen(initialSettings, initialTracker, initialProg
     local Layout = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/Layout.lua")
     local MouseClickEventListener = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/MouseClickEventListener.lua")
     local SearchKeyboard = dofile(Paths.FOLDERS.UI_BASE_CLASSES .. "/SearchKeyboard.lua")
+    local MiscUtils = dofile(Paths.FOLDERS.UTILS_FOLDER .. "/MiscUtils.lua")
     local L = Localization.get
     local settings = initialSettings
     local pokemonSearchKeyboard
