@@ -328,6 +328,7 @@ local function PastRunsScreen(initialSettings, initialTracker, initialProgram)
             Layout(Graphics.ALIGNMENT_TYPE.VERTICAL, 0, {x = 0, y = 0}),
             ui.frames.mainFrame
         )
+        local paddingX = MiscUtils.getPaddingForLanguage(settings, { en=28, de=28 }, 28)
         ui.controls.badgeHeading =
             TextLabel(
             Component(
@@ -345,7 +346,7 @@ local function PastRunsScreen(initialSettings, initialTracker, initialProgram)
             ),
             TextField(
                 L("TITLE_PAST_RUNS_MINIMUM_BADGES"),
-                {x = 28, y = 2},
+                {x = paddingX, y = 2},
                 TextStyle(11, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
         )
@@ -376,6 +377,7 @@ local function PastRunsScreen(initialSettings, initialTracker, initialProgram)
             Layout(Graphics.ALIGNMENT_TYPE.VERTICAL, 0, {x = 0, y = 0}),
             ui.frames.mainFrame
         )
+        local paddingX = MiscUtils.getPaddingForLanguage(settings, { en=52, de=35 }, 52)
         ui.controls.sortHeading =
             TextLabel(
             Component(
@@ -393,7 +395,7 @@ local function PastRunsScreen(initialSettings, initialTracker, initialProgram)
             ),
             TextField(
                 L("TITLE_PAST_RUNS_SORT_BY"),
-                {x = 54, y = 2},
+                {x = paddingX, y = 2},
                 TextStyle(11, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
         )

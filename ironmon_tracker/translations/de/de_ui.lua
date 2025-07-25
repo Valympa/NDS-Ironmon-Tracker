@@ -194,7 +194,7 @@ return {
 -- TrackedInfoScreen/PastRuns
 
 	BUTTON_PAST_RUNS_SWAP = "Swap",
-	TITLE_PAST_RUNS_SORT_BY = "Filter:",
+	TITLE_PAST_RUNS_SORT_BY = "Sortiert nach:",
 	BUTTON_PAST_RUNS_NEWEST = "Neuste",
 	BUTTON_PAST_RUNS_OLDEST = "Älteste",
 	BUTTON_PAST_RUNS_A_Z = "A - Z",
