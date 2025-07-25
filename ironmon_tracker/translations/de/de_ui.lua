@@ -213,7 +213,7 @@ return {
 
 -- LogViewerScreen/PokemonOverviewScreen
 	
-	TEXT_LOG_VIEWER_SEARCH_INSTRUCTION = "Klicke die Tasten unten, um ein Pokemon zu suchen:",
+	TEXT_LOG_VIEWER_SEARCH_INSTRUCTION = "Klicke unten, um ein Pokémon zu finden:",
 	BUTTON_LOG_VIEWER_STATS = "Stats",
 
 -- LogViewerScreen/Stats
@@ -221,19 +221,19 @@ return {
 	TEXT_LOG_VIEWER_BASE_STATS = "Basiswerte (",
 	TEXT_LOG_VIEWER_BASE_STATS_TOTAL = " gesamt)",
 
-	TEXT_LOG_VIEWER_BEST_SPECIAL_ATTACKER = "Beste Spezial-Angreifer",
-	TEXT_LOG_VIEWER_BEST_PHYSICAL_ATTACKER = "Beste Physische Angreifer",
+	TEXT_LOG_VIEWER_BEST_SPECIAL_ATTACKER = "Top Spezial Angreifer",
+	TEXT_LOG_VIEWER_BEST_PHYSICAL_ATTACKER = "Top Physische Angreifer",
 	TEXT_LOG_VIEWER_BIGGEST_SPECIAL_WALLS = "Dickste Spezial Mauer",
 	TEXT_LOG_VIEWER_BEST_DEFENSIVE_TANKS = "Beste Defensive Tanks",
-	TEXT_LOG_VIEWER_BULKIEST_OVERALL = "Am Bulkysten Insgesamt",
+	TEXT_LOG_VIEWER_BULKIEST_OVERALL = "Am Bulkiesten Insgesamt",
 	TEXT_LOG_VIEWER_MOST_FRAIL = "Am Schwächsten",
 
 	TEXT_LOG_VIEWER_DESC_BEST_SPECIAL_ATTACKER = "Höchster Spezial-Angriffs- und Initativwert.",
 	TEXT_LOG_VIEWER_DESC_BEST_PHYSICAL_ATTACKER = "Höchster Angriffs- und Initativwert.",
-	TEXT_LOG_VIEWER_DESC_BIGGEST_SPECIAL_WALLS = "Höchster KP- und Spezial-Verteidigungswert",
-	TEXT_LOG_VIEWER_DESC_BEST_DEFENSIVE_TANKS = "Höchster KP- und Verteidigungswert",
-	TEXT_LOG_VIEWER_DESC_BULKIEST_OVERALL = "Höchster KP-, Verteidigungs- und Spezial-Verteidigungswert.",
-	TEXT_LOG_VIEWER_DESC_MOST_FRAIL = "Niedrigster KP-, Verteidigungs- und Spezial-Verteidigungswert.",
+	TEXT_LOG_VIEWER_DESC_BIGGEST_SPECIAL_WALLS = "Höchster KP- und Spezial-Verteidigungswert.",
+	TEXT_LOG_VIEWER_DESC_BEST_DEFENSIVE_TANKS = "Höchster KP- und Verteidigungswert.",
+	TEXT_LOG_VIEWER_DESC_BULKIEST_OVERALL = "Höchste KP, Verteidigung und Spezial-Verteidigung.",
+	TEXT_LOG_VIEWER_DESC_MOST_FRAIL = "Niedrigste KP, Verteidigung und Spezial-Verteidigung.",
 
 -- LogViewerScreen/PokemonStats
 
