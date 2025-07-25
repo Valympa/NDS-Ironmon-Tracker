@@ -192,33 +192,23 @@ local function MainOptionsScreen(initialSettings, initialTracker, initialProgram
 			ui.frames.mainInnerFrame
 		)
 		
-		local titleText = L("TITLE_MAIN_OPTIONS_CONFIG")
-		local fontSize = 13
-
-		local textWidth = Graphics.getTextWidth and Graphics.getTextWidth(titleText, fontSize)
-                or (#titleText * fontSize * 0.45)
-
-		local boxWidth = Graphics.SIZES.MAIN_SCREEN_WIDTH - 2 * Graphics.SIZES.BORDER_MARGIN
-
-		local textX = math.floor((boxWidth - textWidth) / 2 + 0,5)
-		
-		
+		local paddingX = MiscUtils.getPaddingForLanguage(settings, { en=48, de=30 }, 48)
 		ui.controls.topHeading =
 			TextLabel(
 			Component(
 				ui.frames.mainInnerFrame,
 				Box(
 					{x = 0, y = 0},
-					{width = boxWidth, height = 18},
+					{width = Graphics.SIZES.MAIN_SCREEN_WIDTH - 2 * Graphics.SIZES.BORDER_MARGIN, height = 18},
 					"Top box background color",
 					"Top box border color",
 					false
 				)
 			),
 			TextField(
-				titleText,
-				{x = textX, y = 1},
-				  TextStyle(fontSize, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
+				L("TITLE_MAIN_OPTIONS_CONFIG"),
+				{x = paddingX, y = 1},
+				  TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
 			)
 		)
 		initMainButtons()
