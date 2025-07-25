@@ -340,7 +340,7 @@ local function BadgesAppearanceScreen(initialSettings, initialTracker, initialPr
                     program.saveSettings
                 )
                 table.insert(eventListeners, MouseClickEventListener(radioButton, onRadioButtonClick, radioButton))
-                local text = L("OPTION_BADGE_POSITION_" .. settingName:upper()) or settingName
+                local text = L("OPTION_BADGES_POSITION_" .. settingName:upper()) or settingName
                 TextLabel(
                     Component(
                         singleBadgeFrames[i],
@@ -400,7 +400,7 @@ local function BadgesAppearanceScreen(initialSettings, initialTracker, initialPr
             TextLabel(
             Component(spacerFrame, Box({x = 0, y = 0}, {width = 0, height = 0}, nil, nil, false)),
             TextField(
-                L("LABEL_SPACER"),
+                L("LABEL_BADGES_SPACER"),
                 {x = 0, y = 0},
                 TextStyle(
                     Graphics.FONT.DEFAULT_FONT_SIZE,
@@ -428,6 +428,7 @@ local function BadgesAppearanceScreen(initialSettings, initialTracker, initialPr
             Layout(Graphics.ALIGNMENT_TYPE.VERTICAL, 5, {x = 0, y = 0}),
             ui.frames.topFrame
         )
+        local paddingX = MiscUtils.getPaddingForLanguage(settings, { en=42, de=40 }, 42)
         ui.controls.singleBadgeAlignmentHeading =
             TextLabel(
             Component(
@@ -441,8 +442,8 @@ local function BadgesAppearanceScreen(initialSettings, initialTracker, initialPr
                 )
             ),
             TextField(
-                L("TITLE_ALIGNMENT"),
-                {x = 42, y = 3},
+                L("TITLE_BADGES_ALIGNMENT"),
+                {x = paddingX, y = 3},
                 TextStyle(11, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
         )
@@ -591,6 +592,7 @@ local function BadgesAppearanceScreen(initialSettings, initialTracker, initialPr
             Layout(Graphics.ALIGNMENT_TYPE.VERTICAL, 0, {x = 5, y = 5}),
             ui.frames.mainFrame
         )
+        local paddingX = MiscUtils.getPaddingForLanguage(settings, { en=14, de=19 }, 14)
         ui.controls.topHeading =
             TextLabel(
             Component(
@@ -605,7 +607,7 @@ local function BadgesAppearanceScreen(initialSettings, initialTracker, initialPr
             ),
             TextField(
                 L("TITLE_BADGES_APPEARANCE"),
-                {x = 14, y = 1},
+                {x = paddingX, y = 1},
                 TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
         )

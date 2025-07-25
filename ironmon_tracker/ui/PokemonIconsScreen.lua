@@ -396,6 +396,7 @@ local function PokemonIconsScreen(initialSettings, initialTracker, initialProgra
             Layout(Graphics.ALIGNMENT_TYPE.VERTICAL, 0, {x = Graphics.SIZES.BORDER_MARGIN, y = Graphics.SIZES.BORDER_MARGIN}),
             nil
         )
+        local paddingX = MiscUtils.getPaddingForLanguage(settings, { en=15, de=15 }, 15)
         ui.controls.mainHeading =
             TextLabel(
             Component(
@@ -413,7 +414,7 @@ local function PokemonIconsScreen(initialSettings, initialTracker, initialProgra
             ),
             TextField(
                 L("TITLE_ICON_SETS_SCREEN_POKEMON_ICON_SETS"),
-                {x = 16, y = 1},
+                {x = paddingX, y = 1},
                 TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
         )

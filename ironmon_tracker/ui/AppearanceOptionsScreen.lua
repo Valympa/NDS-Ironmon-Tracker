@@ -332,6 +332,7 @@ local function AppearanceOptionsScreen(initialSettings, initialTracker, initialP
             Layout(Graphics.ALIGNMENT_TYPE.VERTICAL, 0, {x = 0, y = 18}),
             ui.frames.mainFrame
         )
+        local paddingX = MiscUtils.getPaddingForLanguage(settings, { en=14, de=14 }, 14)
         ui.controls.topHeading =
             TextLabel(
             Component(
@@ -346,7 +347,7 @@ local function AppearanceOptionsScreen(initialSettings, initialTracker, initialP
             ),
             TextField(
                 L("TITLE_TRACKER_APPEARANCE"),
-                {x = 14, y = 1},
+                {x = paddingX, y = 1},
                 TextStyle(13, Graphics.FONT.DEFAULT_FONT_FAMILY, "Top box text color", "Top box background color")
             )
         )
